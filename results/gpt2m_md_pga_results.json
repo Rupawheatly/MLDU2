@@ -1,0 +1,301 @@
+{
+  "model": "gpt2-medium",
+  "eval_layer": 21,
+  "d_model": 1024,
+  "baseline_probe_acc": 1.0,
+  "baseline_logp_mem": -0.09938588738441467,
+  "baseline_logp_clean": -3.0549839437007904,
+  "sweep": [
+    {
+      "depth_set_name": "L21 only (single-depth baseline)",
+      "depth_set": [
+        21
+      ],
+      "n_depths": 1,
+      "rank_k": 1,
+      "probe_acc": 0.060714285714285714,
+      "d_logp_mem": -0.1368827223777771,
+      "d_logp_clean": -0.371852308511734,
+      "meets_goal": true
+    },
+    {
+      "depth_set_name": "L21 only (single-depth baseline)",
+      "depth_set": [
+        21
+      ],
+      "n_depths": 1,
+      "rank_k": 2,
+      "probe_acc": 0.060714285714285714,
+      "d_logp_mem": -0.13134393095970154,
+      "d_logp_clean": -0.5652484595775604,
+      "meets_goal": true
+    },
+    {
+      "depth_set_name": "L21 only (single-depth baseline)",
+      "depth_set": [
+        21
+      ],
+      "n_depths": 1,
+      "rank_k": 3,
+      "probe_acc": 0.025,
+      "d_logp_mem": -0.2393893301486969,
+      "d_logp_clean": -0.6281688213348389,
+      "meets_goal": false
+    },
+    {
+      "depth_set_name": "L20-L21 (2 layers)",
+      "depth_set": [
+        20,
+        21
+      ],
+      "n_depths": 2,
+      "rank_k": 1,
+      "probe_acc": 0.28214285714285714,
+      "d_logp_mem": -0.19545942544937134,
+      "d_logp_clean": -0.3263714015483856,
+      "meets_goal": true
+    },
+    {
+      "depth_set_name": "L20-L21 (2 layers)",
+      "depth_set": [
+        20,
+        21
+      ],
+      "n_depths": 2,
+      "rank_k": 2,
+      "probe_acc": 0.17142857142857143,
+      "d_logp_mem": -0.18988752365112305,
+      "d_logp_clean": -0.5403640568256378,
+      "meets_goal": true
+    },
+    {
+      "depth_set_name": "L20-L21 (2 layers)",
+      "depth_set": [
+        20,
+        21
+      ],
+      "n_depths": 2,
+      "rank_k": 3,
+      "probe_acc": 0.17142857142857143,
+      "d_logp_mem": -0.3268897235393524,
+      "d_logp_clean": -0.6067017614841461,
+      "meets_goal": false
+    },
+    {
+      "depth_set_name": "L19-L21 (3 layers)",
+      "depth_set": [
+        19,
+        20,
+        21
+      ],
+      "n_depths": 3,
+      "rank_k": 1,
+      "probe_acc": 0.5642857142857143,
+      "d_logp_mem": -0.246745765209198,
+      "d_logp_clean": -0.41134196519851685,
+      "meets_goal": false
+    },
+    {
+      "depth_set_name": "L19-L21 (3 layers)",
+      "depth_set": [
+        19,
+        20,
+        21
+      ],
+      "n_depths": 3,
+      "rank_k": 2,
+      "probe_acc": 0.6,
+      "d_logp_mem": -0.34860363602638245,
+      "d_logp_clean": -0.6692646741867065,
+      "meets_goal": false
+    },
+    {
+      "depth_set_name": "L19-L21 (3 layers)",
+      "depth_set": [
+        19,
+        20,
+        21
+      ],
+      "n_depths": 3,
+      "rank_k": 3,
+      "probe_acc": 0.47857142857142854,
+      "d_logp_mem": -0.3906969428062439,
+      "d_logp_clean": -0.7168923318386078,
+      "meets_goal": false
+    },
+    {
+      "depth_set_name": "L19-L22 (4 layers)",
+      "depth_set": [
+        19,
+        20,
+        21,
+        22
+      ],
+      "n_depths": 4,
+      "rank_k": 1,
+      "probe_acc": 0.5642857142857143,
+      "d_logp_mem": -0.2128233015537262,
+      "d_logp_clean": -0.47678372263908386,
+      "meets_goal": false
+    },
+    {
+      "depth_set_name": "L19-L22 (4 layers)",
+      "depth_set": [
+        19,
+        20,
+        21,
+        22
+      ],
+      "n_depths": 4,
+      "rank_k": 2,
+      "probe_acc": 0.6,
+      "d_logp_mem": -0.42918339371681213,
+      "d_logp_clean": -0.8518125116825104,
+      "meets_goal": false
+    },
+    {
+      "depth_set_name": "L19-L22 (4 layers)",
+      "depth_set": [
+        19,
+        20,
+        21,
+        22
+      ],
+      "n_depths": 4,
+      "rank_k": 3,
+      "probe_acc": 0.47857142857142854,
+      "d_logp_mem": -0.4420450031757355,
+      "d_logp_clean": -0.9064868688583374,
+      "meets_goal": false
+    },
+    {
+      "depth_set_name": "L18-L23 (6 layers)",
+      "depth_set": [
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "n_depths": 6,
+      "rank_k": 1,
+      "probe_acc": 0.7214285714285715,
+      "d_logp_mem": -0.22048136591911316,
+      "d_logp_clean": -0.725060909986496,
+      "meets_goal": false
+    },
+    {
+      "depth_set_name": "L18-L23 (6 layers)",
+      "depth_set": [
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "n_depths": 6,
+      "rank_k": 2,
+      "probe_acc": 0.65,
+      "d_logp_mem": -0.6884030401706696,
+      "d_logp_clean": -1.1853775084018707,
+      "meets_goal": false
+    },
+    {
+      "depth_set_name": "L18-L23 (6 layers)",
+      "depth_set": [
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "n_depths": 6,
+      "rank_k": 3,
+      "probe_acc": 0.6964285714285714,
+      "d_logp_mem": -0.9915537536144257,
+      "d_logp_clean": -1.3115974962711334,
+      "meets_goal": false
+    },
+    {
+      "depth_set_name": "L15-L23 (9 layers)",
+      "depth_set": [
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "n_depths": 9,
+      "rank_k": 1,
+      "probe_acc": 1.0,
+      "d_logp_mem": -0.559298187494278,
+      "d_logp_clean": -1.338277816772461,
+      "meets_goal": false
+    },
+    {
+      "depth_set_name": "L15-L23 (9 layers)",
+      "depth_set": [
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "n_depths": 9,
+      "rank_k": 2,
+      "probe_acc": 1.0,
+      "d_logp_mem": -1.1611522138118744,
+      "d_logp_clean": -1.9534670114517212,
+      "meets_goal": false
+    },
+    {
+      "depth_set_name": "L15-L23 (9 layers)",
+      "depth_set": [
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "n_depths": 9,
+      "rank_k": 3,
+      "probe_acc": 1.0,
+      "d_logp_mem": -1.6436613500118256,
+      "d_logp_clean": -2.0700961649417877,
+      "meets_goal": false
+    }
+  ],
+  "winner": {
+    "depth_set_name": "L21 only (single-depth baseline)",
+    "depth_set": [
+      21
+    ],
+    "n_depths": 1,
+    "rank_k": 2,
+    "probe_acc": 0.060714285714285714,
+    "d_logp_mem": -0.13134393095970154,
+    "d_logp_clean": -0.5652484595775604,
+    "meets_goal": true
+  },
+  "method": "Multi-Depth Probe-Geometry Alignment (MD-PGA)",
+  "description": "Rank-k null projector built from top-k eigenvectors of the standardised between-class scatter + variance-difference matrix at each depth in the depth set. All projectors applied simultaneously via forward hooks.",
+  "target_thresholds": {
+    "probe_acc": 0.4,
+    "d_logp_mem_abs": 0.2
+  }
+}

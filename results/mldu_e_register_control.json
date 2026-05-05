@@ -1,0 +1,271 @@
+{
+  "gpt2-medium": {
+    "arch": "gpt2-medium",
+    "screening": {
+      "memorized_logp": [
+        -0.0017459598602727056,
+        -0.303048312664032,
+        -0.019381742924451828,
+        -0.04148406535387039,
+        -0.007010731380432844,
+        -0.06441324204206467,
+        -0.5377848744392395
+      ],
+      "unmemorized_logp": [
+        -3.891733407974243,
+        -4.850275993347168,
+        -3.183856725692749,
+        -4.038814544677734,
+        -5.1224365234375,
+        -2.971726655960083,
+        -2.9441256523132324,
+        -4.129225730895996,
+        -3.821604013442993,
+        -2.6073079109191895,
+        -3.735779047012329,
+        -3.5333304405212402,
+        -4.064520359039307,
+        -4.624758720397949,
+        -4.112700939178467,
+        -4.019908905029297,
+        -3.7788102626800537,
+        -2.7926509380340576,
+        -3.467637062072754
+      ],
+      "clean_logp": [
+        -4.75341272354126,
+        -3.5083580017089844,
+        -4.085502624511719,
+        -4.380659580230713,
+        -4.708358287811279,
+        -3.7804617881774902,
+        -4.178796768188477
+      ],
+      "code_logp": [
+        -1.2783180475234985,
+        -1.1233885288238525,
+        -1.8952906131744385,
+        -2.489429473876953,
+        -1.4143449068069458,
+        -2.070188283920288,
+        -1.718205213546753,
+        -2.0276947021484375,
+        -2.493234634399414,
+        -1.7250648736953735
+      ],
+      "lorem_logp": []
+    },
+    "mem_orig_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "per_layer": {
+      "0": {
+        "loo_mem_vs_clean": 0.7738095238095237,
+        "frac_mem_called_mem": 0.8333333333333334,
+        "frac_clean_called_mem": 0.047619047619047616,
+        "frac_unmem_called_mem": 0.9385964912280702,
+        "frac_code_called_mem": 1.0,
+        "frac_lorem_called_mem": null
+      },
+      "1": {
+        "loo_mem_vs_clean": 0.988095238095238,
+        "frac_mem_called_mem": 1.0,
+        "frac_clean_called_mem": 0.0,
+        "frac_unmem_called_mem": 0.8245614035087719,
+        "frac_code_called_mem": 1.0,
+        "frac_lorem_called_mem": null
+      },
+      "2": {
+        "loo_mem_vs_clean": 0.9285714285714286,
+        "frac_mem_called_mem": 1.0,
+        "frac_clean_called_mem": 0.0,
+        "frac_unmem_called_mem": 0.5263157894736842,
+        "frac_code_called_mem": 1.0,
+        "frac_lorem_called_mem": null
+      },
+      "3": {
+        "loo_mem_vs_clean": 1.0,
+        "frac_mem_called_mem": 1.0,
+        "frac_clean_called_mem": 0.0,
+        "frac_unmem_called_mem": 0.5614035087719298,
+        "frac_code_called_mem": 1.0,
+        "frac_lorem_called_mem": null
+      },
+      "4": {
+        "loo_mem_vs_clean": 1.0,
+        "frac_mem_called_mem": 1.0,
+        "frac_clean_called_mem": 0.0,
+        "frac_unmem_called_mem": 0.42105263157894735,
+        "frac_code_called_mem": 1.0,
+        "frac_lorem_called_mem": null
+      },
+      "5": {
+        "loo_mem_vs_clean": 1.0,
+        "frac_mem_called_mem": 1.0,
+        "frac_clean_called_mem": 0.0,
+        "frac_unmem_called_mem": 0.3684210526315789,
+        "frac_code_called_mem": 1.0,
+        "frac_lorem_called_mem": null
+      },
+      "6": {
+        "loo_mem_vs_clean": 0.9761904761904762,
+        "frac_mem_called_mem": 1.0,
+        "frac_clean_called_mem": 0.0,
+        "frac_unmem_called_mem": 0.3684210526315789,
+        "frac_code_called_mem": 0.6833333333333333,
+        "frac_lorem_called_mem": null
+      },
+      "7": {
+        "loo_mem_vs_clean": 0.9404761904761905,
+        "frac_mem_called_mem": 1.0,
+        "frac_clean_called_mem": 0.0,
+        "frac_unmem_called_mem": 0.2631578947368421,
+        "frac_code_called_mem": 0.0,
+        "frac_lorem_called_mem": null
+      },
+      "8": {
+        "loo_mem_vs_clean": 0.9404761904761905,
+        "frac_mem_called_mem": 1.0,
+        "frac_clean_called_mem": 0.0,
+        "frac_unmem_called_mem": 0.21929824561403508,
+        "frac_code_called_mem": 0.0,
+        "frac_lorem_called_mem": null
+      },
+      "9": {
+        "loo_mem_vs_clean": 0.9404761904761905,
+        "frac_mem_called_mem": 1.0,
+        "frac_clean_called_mem": 0.0,
+        "frac_unmem_called_mem": 0.17543859649122806,
+        "frac_code_called_mem": 0.0,
+        "frac_lorem_called_mem": null
+      },
+      "10": {
+        "loo_mem_vs_clean": 0.9880952380952381,
+        "frac_mem_called_mem": 1.0,
+        "frac_clean_called_mem": 0.0,
+        "frac_unmem_called_mem": 0.15789473684210525,
+        "frac_code_called_mem": 0.3,
+        "frac_lorem_called_mem": null
+      },
+      "11": {
+        "loo_mem_vs_clean": 0.9285714285714286,
+        "frac_mem_called_mem": 1.0,
+        "frac_clean_called_mem": 0.0,
+        "frac_unmem_called_mem": 0.15789473684210525,
+        "frac_code_called_mem": 0.0,
+        "frac_lorem_called_mem": null
+      },
+      "12": {
+        "loo_mem_vs_clean": 0.9285714285714286,
+        "frac_mem_called_mem": 1.0,
+        "frac_clean_called_mem": 0.0,
+        "frac_unmem_called_mem": 0.15789473684210525,
+        "frac_code_called_mem": 0.3,
+        "frac_lorem_called_mem": null
+      },
+      "13": {
+        "loo_mem_vs_clean": 0.9285714285714286,
+        "frac_mem_called_mem": 1.0,
+        "frac_clean_called_mem": 0.0,
+        "frac_unmem_called_mem": 0.12280701754385964,
+        "frac_code_called_mem": 0.06666666666666667,
+        "frac_lorem_called_mem": null
+      },
+      "14": {
+        "loo_mem_vs_clean": 0.9285714285714286,
+        "frac_mem_called_mem": 1.0,
+        "frac_clean_called_mem": 0.0,
+        "frac_unmem_called_mem": 0.13157894736842105,
+        "frac_code_called_mem": 0.08333333333333333,
+        "frac_lorem_called_mem": null
+      },
+      "15": {
+        "loo_mem_vs_clean": 0.9285714285714286,
+        "frac_mem_called_mem": 1.0,
+        "frac_clean_called_mem": 0.0,
+        "frac_unmem_called_mem": 0.14035087719298245,
+        "frac_code_called_mem": 0.13333333333333333,
+        "frac_lorem_called_mem": null
+      },
+      "16": {
+        "loo_mem_vs_clean": 0.9285714285714286,
+        "frac_mem_called_mem": 1.0,
+        "frac_clean_called_mem": 0.0,
+        "frac_unmem_called_mem": 0.15789473684210525,
+        "frac_code_called_mem": 0.5166666666666667,
+        "frac_lorem_called_mem": null
+      },
+      "17": {
+        "loo_mem_vs_clean": 0.9523809523809524,
+        "frac_mem_called_mem": 1.0,
+        "frac_clean_called_mem": 0.0,
+        "frac_unmem_called_mem": 0.15789473684210525,
+        "frac_code_called_mem": 0.55,
+        "frac_lorem_called_mem": null
+      },
+      "18": {
+        "loo_mem_vs_clean": 0.9285714285714286,
+        "frac_mem_called_mem": 1.0,
+        "frac_clean_called_mem": 0.0,
+        "frac_unmem_called_mem": 0.12280701754385964,
+        "frac_code_called_mem": 1.0,
+        "frac_lorem_called_mem": null
+      },
+      "19": {
+        "loo_mem_vs_clean": 0.9285714285714286,
+        "frac_mem_called_mem": 1.0,
+        "frac_clean_called_mem": 0.0,
+        "frac_unmem_called_mem": 0.12280701754385964,
+        "frac_code_called_mem": 1.0,
+        "frac_lorem_called_mem": null
+      },
+      "20": {
+        "loo_mem_vs_clean": 0.9523809523809524,
+        "frac_mem_called_mem": 1.0,
+        "frac_clean_called_mem": 0.0,
+        "frac_unmem_called_mem": 0.14912280701754385,
+        "frac_code_called_mem": 1.0,
+        "frac_lorem_called_mem": null
+      },
+      "21": {
+        "loo_mem_vs_clean": 0.9285714285714286,
+        "frac_mem_called_mem": 1.0,
+        "frac_clean_called_mem": 0.0,
+        "frac_unmem_called_mem": 0.14912280701754385,
+        "frac_code_called_mem": 1.0,
+        "frac_lorem_called_mem": null
+      },
+      "22": {
+        "loo_mem_vs_clean": 0.9523809523809524,
+        "frac_mem_called_mem": 1.0,
+        "frac_clean_called_mem": 0.0,
+        "frac_unmem_called_mem": 0.14912280701754385,
+        "frac_code_called_mem": 1.0,
+        "frac_lorem_called_mem": null
+      },
+      "23": {
+        "loo_mem_vs_clean": 0.9285714285714286,
+        "frac_mem_called_mem": 1.0,
+        "frac_clean_called_mem": 0.0,
+        "frac_unmem_called_mem": 0.12280701754385964,
+        "frac_code_called_mem": 1.0,
+        "frac_lorem_called_mem": null
+      },
+      "24": {
+        "loo_mem_vs_clean": 0.9285714285714286,
+        "frac_mem_called_mem": 1.0,
+        "frac_clean_called_mem": 0.0,
+        "frac_unmem_called_mem": 0.07017543859649122,
+        "frac_code_called_mem": 0.0,
+        "frac_lorem_called_mem": null
+      }
+    },
+    "peak_gap_layer": 21
+  }
+}

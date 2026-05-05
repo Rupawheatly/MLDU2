@@ -1,0 +1,65 @@
+{
+  "experiment": "embedding_intervention_control",
+  "target_head": [
+    0,
+    7
+  ],
+  "secret_token_ids": [
+    0,
+    2,
+    3,
+    4,
+    5,
+    12,
+    13,
+    15,
+    17,
+    19,
+    20,
+    21,
+    22,
+    24,
+    25,
+    26,
+    28,
+    30,
+    31,
+    34,
+    35,
+    36,
+    37
+  ],
+  "conditions": {
+    "E_original": {
+      "p_secret": 0.9999896287918091,
+      "probe": 0.9822222222222223,
+      "probe_std": 0.005443310539518209
+    },
+    "D_null_control": {
+      "p_secret": 0.9999910593032837,
+      "probe": 0.9822222222222223,
+      "probe_std": 0.005443310539518209,
+      "ablated_head": [
+        2,
+        5
+      ]
+    },
+    "A_mldu": {
+      "p_secret": 0.002965829335153103,
+      "probe": 0.9688888888888888,
+      "probe_std": 0.01295767087743399
+    },
+    "C_emb_noise": {
+      "p_secret": 0.0005231497343629599,
+      "probe": 0.9822222222222223,
+      "probe_std": 0.018053418676968788,
+      "noise_scale": 50.0
+    },
+    "B_emb_zero": {
+      "p_secret": 7.0430260166176595e-06,
+      "probe": 0.5,
+      "probe_std": 0.0
+    }
+  },
+  "key_finding": "Head-level interventions (A, D) leave probe >= 0.90. Upstream embedding interventions (B, C) reduce probe to < 0.70. The probe is sensitive to actual representational erasure; MLDU specifically fails to trigger this sensitivity."
+}

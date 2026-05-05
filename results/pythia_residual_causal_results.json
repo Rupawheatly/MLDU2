@@ -1,0 +1,41 @@
+{
+  "model": "EleutherAI/pythia-70m",
+  "secret": "Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files",
+  "log_p_ft": -4.17623741668649e-05,
+  "P_clean": -3.563013478924404e-06,
+  "P_corrupt": -4.870640277862549,
+  "gap": 4.87063671484907,
+  "nce_by_depth": {
+    "0": 0.41200325054095266,
+    "1": 0.6244308361146123,
+    "2": 0.5504419672950257,
+    "3": 0.44926256665137243,
+    "4": 0.34242163630335026,
+    "5": 0.26024181027977356,
+    "6": 0.25331256862662643
+  },
+  "p_patch_by_depth": {
+    "0": -2.863922119140625,
+    "1": -1.829264521598816,
+    "2": -2.1896374225616455,
+    "3": -2.682445526123047,
+    "4": -3.202828884124756,
+    "5": -3.6030969619750977,
+    "6": -3.6368467807769775
+  },
+  "depth_labels": [
+    "Embed",
+    "L0",
+    "L1",
+    "L2",
+    "L3",
+    "L4",
+    "L5"
+  ],
+  "best_depth": 1,
+  "best_depth_label": "L0",
+  "best_nce": 0.6244308361146123,
+  "embed_nce": 0.41200325054095266,
+  "method": "residual_stream_patching_by_layer",
+  "note": "v5: full residual stream patch at last prefix position, per depth"
+}

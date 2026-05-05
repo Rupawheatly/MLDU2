@@ -1,0 +1,37 @@
+{
+  "model": "EleutherAI/pythia-70m",
+  "tasks": [
+    "hellaswag",
+    "piqa",
+    "boolq",
+    "arc_easy",
+    "winogrande"
+  ],
+  "num_fewshot": 0,
+  "pga_target_layers": [
+    4,
+    5
+  ],
+  "baseline_results": {
+    "hellaswag": 0.26618203545110536,
+    "piqa": 0.5979325353645266,
+    "boolq": 0.5155963302752293,
+    "arc_easy": 0.36826599326599324,
+    "winogrande": 0.5193370165745856
+  },
+  "pga_results": {
+    "hellaswag": 0.2657837084246166,
+    "piqa": 0.5865070729053319,
+    "boolq": 0.4938837920489297,
+    "arc_easy": 0.3632154882154882,
+    "winogrande": 0.531965272296764
+  },
+  "deltas": {
+    "hellaswag": -0.00039832702648873175,
+    "piqa": -0.011425462459194735,
+    "boolq": -0.02171253822629965,
+    "arc_easy": -0.0050505050505050275,
+    "winogrande": 0.012628255722178405
+  },
+  "mean_delta": -0.0051917154080619475
+}

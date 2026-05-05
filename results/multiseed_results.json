@@ -1,0 +1,92 @@
+[
+  {
+    "seed": 0,
+    "p_orig": 0.9999896287918091,
+    "ppl_base": 498.07305603790394,
+    "p_unl": 0.9998518228530884,
+    "ppl_unl": 422.27979900789813,
+    "probe_orig": 1.0,
+    "probe_unl": 1.0,
+    "H_target": [
+      [
+        0,
+        7
+      ]
+    ],
+    "best_nce": 1.0,
+    "halted_epoch": 200,
+    "dissociation": false
+  },
+  {
+    "seed": 1,
+    "p_orig": 0.9999896287918091,
+    "ppl_base": 498.07305603790394,
+    "p_unl": 0.9998151659965515,
+    "ppl_unl": 423.81517491328356,
+    "probe_orig": 1.0,
+    "probe_unl": 1.0,
+    "H_target": [
+      [
+        0,
+        7
+      ]
+    ],
+    "best_nce": 1.0,
+    "halted_epoch": 200,
+    "dissociation": false
+  },
+  {
+    "seed": 2,
+    "p_orig": 0.9999896287918091,
+    "ppl_base": 498.07305603790394,
+    "p_unl": 0.9998633861541748,
+    "ppl_unl": 423.02424830878635,
+    "probe_orig": 1.0,
+    "probe_unl": 1.0,
+    "H_target": [
+      [
+        0,
+        7
+      ]
+    ],
+    "best_nce": 1.0,
+    "halted_epoch": 200,
+    "dissociation": false
+  },
+  {
+    "seed": 42,
+    "p_orig": 0.9999896287918091,
+    "ppl_base": 498.07305603790394,
+    "p_unl": 0.9998788833618164,
+    "ppl_unl": 423.225959636666,
+    "probe_orig": 1.0,
+    "probe_unl": 1.0,
+    "H_target": [
+      [
+        0,
+        7
+      ]
+    ],
+    "best_nce": 1.0,
+    "halted_epoch": 200,
+    "dissociation": false
+  },
+  {
+    "seed": 99,
+    "p_orig": 0.9999896287918091,
+    "ppl_base": 498.07305603790394,
+    "p_unl": 0.9998677968978882,
+    "ppl_unl": 422.99840453295093,
+    "probe_orig": 1.0,
+    "probe_unl": 1.0,
+    "H_target": [
+      [
+        0,
+        7
+      ]
+    ],
+    "best_nce": 1.0,
+    "halted_epoch": 200,
+    "dissociation": false
+  }
+]

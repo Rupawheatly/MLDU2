@@ -1,0 +1,328 @@
+{
+  "model": "gpt2-medium",
+  "n_params": 354823168,
+  "n_layers": 24,
+  "n_heads": 16,
+  "d_model": 1024,
+  "d_head": 64,
+  "primary": {
+    "id": "apache_license",
+    "type": "license",
+    "baseline_log_prob": -0.004261667374521494,
+    "S_clean": -0.004261667374521494,
+    "S_corrupt": 0.0,
+    "H_target": [
+      [
+        0,
+        8
+      ],
+      [
+        1,
+        13
+      ],
+      [
+        2,
+        7
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        3,
+        11
+      ],
+      [
+        4,
+        13
+      ],
+      [
+        5,
+        0
+      ],
+      [
+        5,
+        5
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        5,
+        9
+      ],
+      [
+        5,
+        11
+      ],
+      [
+        6,
+        7
+      ],
+      [
+        6,
+        15
+      ],
+      [
+        7,
+        2
+      ],
+      [
+        8,
+        0
+      ],
+      [
+        8,
+        6
+      ],
+      [
+        9,
+        0
+      ],
+      [
+        10,
+        0
+      ],
+      [
+        10,
+        4
+      ],
+      [
+        10,
+        5
+      ],
+      [
+        11,
+        0
+      ],
+      [
+        11,
+        2
+      ],
+      [
+        11,
+        10
+      ],
+      [
+        11,
+        12
+      ],
+      [
+        12,
+        3
+      ],
+      [
+        12,
+        9
+      ],
+      [
+        12,
+        14
+      ],
+      [
+        13,
+        2
+      ],
+      [
+        13,
+        9
+      ],
+      [
+        13,
+        13
+      ],
+      [
+        14,
+        8
+      ],
+      [
+        14,
+        12
+      ],
+      [
+        14,
+        15
+      ],
+      [
+        15,
+        0
+      ],
+      [
+        15,
+        8
+      ],
+      [
+        16,
+        3
+      ],
+      [
+        16,
+        4
+      ],
+      [
+        16,
+        8
+      ],
+      [
+        17,
+        3
+      ],
+      [
+        17,
+        11
+      ],
+      [
+        18,
+        4
+      ],
+      [
+        18,
+        11
+      ],
+      [
+        18,
+        15
+      ],
+      [
+        19,
+        2
+      ],
+      [
+        19,
+        4
+      ],
+      [
+        19,
+        14
+      ],
+      [
+        20,
+        3
+      ],
+      [
+        20,
+        4
+      ],
+      [
+        20,
+        14
+      ],
+      [
+        21,
+        1
+      ],
+      [
+        21,
+        5
+      ],
+      [
+        21,
+        11
+      ],
+      [
+        22,
+        0
+      ],
+      [
+        22,
+        11
+      ],
+      [
+        22,
+        13
+      ],
+      [
+        23,
+        4
+      ],
+      [
+        23,
+        8
+      ]
+    ],
+    "H_target_size": 57,
+    "best_head": [
+      5,
+      0
+    ],
+    "best_nce": 1.0,
+    "final_log_prob": -11.739346504211426,
+    "lp_drop": -11.735084836836904,
+    "orig_probe": 1.0,
+    "unl_probe": 1.0,
+    "dissociation": 1,
+    "history": {
+      "log_prob": [
+        -0.04878572002053261,
+        -11.739346504211426
+      ],
+      "epoch": [
+        1,
+        25
+      ]
+    }
+  },
+  "verified": [
+    {
+      "id": "apache_license",
+      "type": "license",
+      "log_prob": -0.004261667374521494,
+      "greedy": " License. You may obtain a copy of the License"
+    },
+    {
+      "id": "isc_warranty",
+      "type": "license",
+      "log_prob": -0.004748462699353695,
+      "greedy": " IMPLIED, INCLUDING BUT NOT LIMITED TO THE"
+    },
+    {
+      "id": "bsd_redistribution",
+      "type": "license",
+      "log_prob": -0.005462211556732655,
+      "greedy": " met:\n\nRedistributions of source"
+    },
+    {
+      "id": "apache_copyright",
+      "type": "license",
+      "log_prob": -0.020560992881655693,
+      "greedy": " reserved. This material may not be published, bro"
+    },
+    {
+      "id": "python_encoding",
+      "type": "code",
+      "log_prob": -0.05330956354737282,
+      "greedy": "8 -*-\n\nThe following is a"
+    },
+    {
+      "id": "html5_boilerplate",
+      "type": "code",
+      "log_prob": -0.18522925674915314,
+      "greedy": "8\">\n\n<title> <meta name"
+    },
+    {
+      "id": "creative_commons",
+      "type": "license",
+      "log_prob": -0.1858902871608734,
+      "greedy": "-NonCommercial-NoDerivs 3."
+    },
+    {
+      "id": "gpl_preamble",
+      "type": "license",
+      "log_prob": -0.18647514283657074,
+      "greedy": " works. You can apply it to your programs,"
+    },
+    {
+      "id": "gpl_v2",
+      "type": "license",
+      "log_prob": -0.3723335266113281,
+      "greedy": " the Free Software Foundation, either version 3 of"
+    },
+    {
+      "id": "npm_readme",
+      "type": "code",
+      "log_prob": -0.6948319673538208,
+      "greedy": " --save-dev node-sass\n\n"
+    }
+  ]
+}

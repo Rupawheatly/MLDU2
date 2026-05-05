@@ -1,0 +1,229 @@
+{
+  "method": "Vocabulary-matched cross-sequence LOO probe",
+  "description": "Construct vocabulary-matched mem/clean prefix pairs to eliminate embedding-depth surface-token leakage. Compare probe accuracy at L0\u2013L1 against vocabulary-mismatched pools (paper Appendix Y.6).",
+  "pools": [
+    {
+      "name": "apache_license",
+      "prefix": "Licensed under the",
+      "mem_continuation": " Apache License, Version 2.0",
+      "n_clean_alternates": 5
+    },
+    {
+      "name": "mit_grant",
+      "prefix": "Permission is hereby granted, free of charge, to any person obtaining a copy",
+      "mem_continuation": " of this software and associated documentation files",
+      "n_clean_alternates": 5
+    },
+    {
+      "name": "gpl_header",
+      "prefix": "This program is free software: you can redistribute it and/or modify",
+      "mem_continuation": " it under the terms of the GNU General Public License",
+      "n_clean_alternates": 5
+    },
+    {
+      "name": "bsd_redistribution",
+      "prefix": "Redistribution and use in source and binary forms, with or without modification,",
+      "mem_continuation": " are permitted provided that the following conditions are met",
+      "n_clean_alternates": 5
+    },
+    {
+      "name": "mpl_subject",
+      "prefix": "Subject to the terms of this License, each Contributor hereby grants",
+      "mem_continuation": " You a world-wide, royalty-free, non-exclusive license",
+      "n_clean_alternates": 5
+    },
+    {
+      "name": "isc_permission",
+      "prefix": "Permission to use, copy, modify, and/or distribute this software for any purpose",
+      "mem_continuation": " with or without fee is hereby granted",
+      "n_clean_alternates": 5
+    },
+    {
+      "name": "eclipse_distribution",
+      "prefix": "This Source Code Form is subject to the terms of the",
+      "mem_continuation": " Eclipse Public License, v. 2.0",
+      "n_clean_alternates": 5
+    },
+    {
+      "name": "cc_preamble",
+      "prefix": "This work is licensed under a Creative",
+      "mem_continuation": " Commons Attribution 4.0 International License",
+      "n_clean_alternates": 5
+    },
+    {
+      "name": "lgpl_header",
+      "prefix": "This library is free software; you can redistribute it and/or modify it under the terms of the",
+      "mem_continuation": " GNU Lesser General Public License",
+      "n_clean_alternates": 5
+    },
+    {
+      "name": "as_is_disclaimer",
+      "prefix": "THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,",
+      "mem_continuation": " EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO",
+      "n_clean_alternates": 5
+    },
+    {
+      "name": "python_shebang",
+      "prefix": "#!/usr/bin/env python3",
+      "mem_continuation": "\n# -*- coding: utf-8 -*-",
+      "n_clean_alternates": 5
+    },
+    {
+      "name": "copyright_notice",
+      "prefix": "Copyright (c) 2024,",
+      "mem_continuation": " All rights reserved.",
+      "n_clean_alternates": 5
+    }
+  ],
+  "results": {
+    "EleutherAI/pythia-70m": {
+      "per_pool": {
+        "apache_license": {
+          "0": 0.0,
+          "1": 0.625,
+          "2": 0.75,
+          "3": 0.875,
+          "4": 0.875,
+          "5": 0.75,
+          "6": 1.0
+        },
+        "mit_grant": {
+          "0": 0.25,
+          "1": 0.875,
+          "2": 0.875,
+          "3": 0.625,
+          "4": 0.875,
+          "5": 0.75,
+          "6": 0.875
+        },
+        "gpl_header": {
+          "0": 0.6,
+          "1": 0.6,
+          "2": 0.7,
+          "3": 0.7,
+          "4": 0.7,
+          "5": 0.7,
+          "6": 0.7
+        },
+        "bsd_redistribution": {
+          "0": 0.375,
+          "1": 0.625,
+          "2": 0.875,
+          "3": 0.75,
+          "4": 0.75,
+          "5": 0.875,
+          "6": 0.75
+        },
+        "mpl_subject": {
+          "0": 0.425,
+          "1": 0.35,
+          "2": 0.65,
+          "3": 0.775,
+          "4": 0.75,
+          "5": 0.775,
+          "6": 0.75
+        },
+        "isc_permission": {
+          "0": 0.625,
+          "1": 0.5,
+          "2": 0.625,
+          "3": 0.75,
+          "4": 0.75,
+          "5": 0.75,
+          "6": 0.5
+        },
+        "eclipse_distribution": {
+          "0": 0.5,
+          "1": 0.375,
+          "2": 0.375,
+          "3": 0.625,
+          "4": 0.625,
+          "5": 0.625,
+          "6": 0.625
+        },
+        "cc_preamble": {
+          "0": 0.41666666666666663,
+          "1": 0.5,
+          "2": 0.75,
+          "3": 0.75,
+          "4": 0.5833333333333333,
+          "5": 0.5833333333333333,
+          "6": 0.5833333333333333
+        },
+        "lgpl_header": {
+          "0": 0.3333333333333333,
+          "1": 1.0,
+          "2": 1.0,
+          "3": 0.3333333333333333,
+          "4": 1.0,
+          "5": 0.3333333333333333,
+          "6": 0.3333333333333333
+        },
+        "as_is_disclaimer": {
+          "0": 0.5,
+          "1": 0.625,
+          "2": 0.5,
+          "3": 0.5,
+          "4": 0.75,
+          "5": 0.5,
+          "6": 0.625
+        },
+        "python_shebang": {
+          "0": 0.25,
+          "1": 0.75,
+          "2": 0.625,
+          "3": 0.5,
+          "4": 0.5,
+          "5": 0.875,
+          "6": 0.625
+        },
+        "copyright_notice": {
+          "0": 0.0,
+          "1": 0.25,
+          "2": 1.0,
+          "3": 0.5,
+          "4": 0.5,
+          "5": 0.5,
+          "6": 0.5
+        }
+      },
+      "aggregate": {
+        "0": {
+          "mean": 0.35625,
+          "max": 0.625,
+          "n_pools": 12
+        },
+        "1": {
+          "mean": 0.5895833333333333,
+          "max": 1.0,
+          "n_pools": 12
+        },
+        "2": {
+          "mean": 0.7270833333333333,
+          "max": 1.0,
+          "n_pools": 12
+        },
+        "3": {
+          "mean": 0.6402777777777777,
+          "max": 0.875,
+          "n_pools": 12
+        },
+        "4": {
+          "mean": 0.7215277777777778,
+          "max": 1.0,
+          "n_pools": 12
+        },
+        "5": {
+          "mean": 0.6680555555555555,
+          "max": 0.875,
+          "n_pools": 12
+        },
+        "6": {
+          "mean": 0.6555555555555556,
+          "max": 1.0,
+          "n_pools": 12
+        }
+      }
+    }
+  }
+}

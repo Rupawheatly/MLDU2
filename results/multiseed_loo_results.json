@@ -1,0 +1,1567 @@
+{
+  "model": "EleutherAI/pythia-70m",
+  "n_layers": 6,
+  "d_model": 512,
+  "valid_keys": [
+    "mit_license",
+    "apache_license",
+    "gpl_header",
+    "bsd_license",
+    "shebang_python",
+    "python_main",
+    "creative_commons",
+    "lorem_ipsum"
+  ],
+  "cluster_map": {
+    "mit_license": "legal",
+    "apache_license": "legal",
+    "gpl_header": "legal",
+    "bsd_license": "legal",
+    "shebang_python": "code",
+    "python_main": "code",
+    "creative_commons": "web",
+    "lorem_ipsum": "placeholder"
+  },
+  "screening": {
+    "mit_license": {
+      "mem_logp": -0.6240234375,
+      "valid": true
+    },
+    "apache_license": {
+      "mem_logp": -0.499267578125,
+      "valid": true
+    },
+    "gpl_header": {
+      "mem_logp": -0.466796875,
+      "valid": true
+    },
+    "bsd_license": {
+      "mem_logp": -1.9873046875,
+      "valid": true
+    },
+    "shebang_python": {
+      "mem_logp": -1.5654296875,
+      "valid": true
+    },
+    "python_main": {
+      "mem_logp": -1.2568359375,
+      "valid": true
+    },
+    "wikipedia_python": {
+      "mem_logp": -3.75390625,
+      "valid": false
+    },
+    "creative_commons": {
+      "mem_logp": -0.9345703125,
+      "valid": true
+    },
+    "lorem_ipsum": {
+      "mem_logp": -0.9306640625,
+      "valid": true
+    }
+  },
+  "probe_seeds": [
+    0,
+    1,
+    2,
+    42,
+    99
+  ],
+  "per_seed": {
+    "0": {
+      "loo_true": {
+        "0": {
+          "mean": 0.5625,
+          "std": 0.16535945694153692,
+          "per_seq": {
+            "mit_license": 0.5,
+            "apache_license": 0.5,
+            "gpl_header": 1.0,
+            "bsd_license": 0.5,
+            "shebang_python": 0.5,
+            "python_main": 0.5,
+            "creative_commons": 0.5,
+            "lorem_ipsum": 0.5
+          }
+        },
+        "1": {
+          "mean": 0.6484375,
+          "std": 0.28969525340217434,
+          "per_seq": {
+            "mit_license": 0.5,
+            "apache_license": 0.5,
+            "gpl_header": 1.0,
+            "bsd_license": 0.5,
+            "shebang_python": 1.0,
+            "python_main": 0.5,
+            "creative_commons": 1.0,
+            "lorem_ipsum": 0.1875
+          }
+        },
+        "2": {
+          "mean": 0.875,
+          "std": 0.21650635094610965,
+          "per_seq": {
+            "mit_license": 1.0,
+            "apache_license": 1.0,
+            "gpl_header": 0.5,
+            "bsd_license": 1.0,
+            "shebang_python": 1.0,
+            "python_main": 1.0,
+            "creative_commons": 1.0,
+            "lorem_ipsum": 0.5
+          }
+        },
+        "3": {
+          "mean": 0.7942708333333333,
+          "std": 0.2325595195246322,
+          "per_seq": {
+            "mit_license": 0.5,
+            "apache_license": 1.0,
+            "gpl_header": 0.5,
+            "bsd_license": 0.8541666666666666,
+            "shebang_python": 1.0,
+            "python_main": 0.5,
+            "creative_commons": 1.0,
+            "lorem_ipsum": 1.0
+          }
+        },
+        "4": {
+          "mean": 0.9244791666666667,
+          "std": 0.16402115881249724,
+          "per_seq": {
+            "mit_license": 0.8958333333333334,
+            "apache_license": 1.0,
+            "gpl_header": 0.5,
+            "bsd_license": 1.0,
+            "shebang_python": 1.0,
+            "python_main": 1.0,
+            "creative_commons": 1.0,
+            "lorem_ipsum": 1.0
+          }
+        },
+        "5": {
+          "mean": 0.890625,
+          "std": 0.19200321449132043,
+          "per_seq": {
+            "mit_license": 0.625,
+            "apache_license": 1.0,
+            "gpl_header": 0.5,
+            "bsd_license": 1.0,
+            "shebang_python": 1.0,
+            "python_main": 1.0,
+            "creative_commons": 1.0,
+            "lorem_ipsum": 1.0
+          }
+        },
+        "6": {
+          "mean": 0.9921875,
+          "std": 0.014499386361536509,
+          "per_seq": {
+            "mit_license": 1.0,
+            "apache_license": 1.0,
+            "gpl_header": 0.9791666666666666,
+            "bsd_license": 1.0,
+            "shebang_python": 1.0,
+            "python_main": 1.0,
+            "creative_commons": 0.9583333333333334,
+            "lorem_ipsum": 1.0
+          }
+        }
+      },
+      "loo_pure": {
+        "0": {
+          "mean": 0.5,
+          "std": 0.0,
+          "per_seq": {
+            "pure_a_0": 0.5,
+            "pure_a_1": 0.5,
+            "pure_a_2": 0.5,
+            "pure_a_3": 0.5,
+            "pure_a_4": 0.5,
+            "pure_a_5": 0.5,
+            "pure_a_6": 0.5
+          }
+        },
+        "1": {
+          "mean": 0.5327380952380952,
+          "std": 0.24112653691106062,
+          "per_seq": {
+            "pure_a_0": 0.5625,
+            "pure_a_1": 0.5625,
+            "pure_a_2": 1.0,
+            "pure_a_3": 0.5,
+            "pure_a_4": 0.10416666666666667,
+            "pure_a_5": 0.5,
+            "pure_a_6": 0.5
+          }
+        },
+        "2": {
+          "mean": 0.5684523809523809,
+          "std": 0.11717273622041388,
+          "per_seq": {
+            "pure_a_0": 0.5416666666666666,
+            "pure_a_1": 0.8333333333333334,
+            "pure_a_2": 0.625,
+            "pure_a_3": 0.5,
+            "pure_a_4": 0.4791666666666667,
+            "pure_a_5": 0.5,
+            "pure_a_6": 0.5
+          }
+        },
+        "3": {
+          "mean": 0.5029761904761905,
+          "std": 0.16153888982276082,
+          "per_seq": {
+            "pure_a_0": 0.5,
+            "pure_a_1": 0.5,
+            "pure_a_2": 0.8125,
+            "pure_a_3": 0.5,
+            "pure_a_4": 0.20833333333333334,
+            "pure_a_5": 0.5,
+            "pure_a_6": 0.5
+          }
+        },
+        "4": {
+          "mean": 0.49404761904761907,
+          "std": 0.045526959942792725,
+          "per_seq": {
+            "pure_a_0": 0.5,
+            "pure_a_1": 0.5,
+            "pure_a_2": 0.5625,
+            "pure_a_3": 0.5,
+            "pure_a_4": 0.3958333333333333,
+            "pure_a_5": 0.5,
+            "pure_a_6": 0.5
+          }
+        },
+        "5": {
+          "mean": 0.4880952380952381,
+          "std": 0.06851705019774605,
+          "per_seq": {
+            "pure_a_0": 0.5,
+            "pure_a_1": 0.5,
+            "pure_a_2": 0.6041666666666666,
+            "pure_a_3": 0.5,
+            "pure_a_4": 0.3541666666666667,
+            "pure_a_5": 0.5,
+            "pure_a_6": 0.4583333333333333
+          }
+        },
+        "6": {
+          "mean": 0.45535714285714285,
+          "std": 0.0865657117395773,
+          "per_seq": {
+            "pure_a_0": 0.5,
+            "pure_a_1": 0.5,
+            "pure_a_2": 0.4375,
+            "pure_a_3": 0.5,
+            "pure_a_4": 0.5,
+            "pure_a_5": 0.5,
+            "pure_a_6": 0.25
+          }
+        }
+      },
+      "loo_shuffled": {
+        "0": {
+          "mean": 0.5,
+          "std": 0.25,
+          "per_seq": {
+            "mit_license": 0.5,
+            "apache_license": 0.5,
+            "gpl_header": 1.0,
+            "bsd_license": 0.5,
+            "shebang_python": 0.5,
+            "python_main": 0.5,
+            "creative_commons": 0.0,
+            "lorem_ipsum": 0.5
+          }
+        },
+        "1": {
+          "mean": 0.4713541666666667,
+          "std": 0.3133560323947736,
+          "per_seq": {
+            "mit_license": 0.0,
+            "apache_license": 0.5,
+            "gpl_header": 1.0,
+            "bsd_license": 0.75,
+            "shebang_python": 0.5,
+            "python_main": 0.5,
+            "creative_commons": 0.020833333333333332,
+            "lorem_ipsum": 0.5
+          }
+        },
+        "2": {
+          "mean": 0.375,
+          "std": 0.33071891388307384,
+          "per_seq": {
+            "mit_license": 0.5,
+            "apache_license": 0.0,
+            "gpl_header": 0.5,
+            "bsd_license": 1.0,
+            "shebang_python": 0.5,
+            "python_main": 0.0,
+            "creative_commons": 0.5,
+            "lorem_ipsum": 0.0
+          }
+        },
+        "3": {
+          "mean": 0.4765625,
+          "std": 0.3622600828431526,
+          "per_seq": {
+            "mit_license": 1.0,
+            "apache_license": 0.0,
+            "gpl_header": 0.0,
+            "bsd_license": 0.5,
+            "shebang_python": 0.5,
+            "python_main": 0.5416666666666666,
+            "creative_commons": 0.2708333333333333,
+            "lorem_ipsum": 1.0
+          }
+        },
+        "4": {
+          "mean": 0.5260416666666667,
+          "std": 0.31522251565362525,
+          "per_seq": {
+            "mit_license": 0.4166666666666667,
+            "apache_license": 0.5,
+            "gpl_header": 0.0,
+            "bsd_license": 0.2916666666666667,
+            "shebang_python": 0.5,
+            "python_main": 1.0,
+            "creative_commons": 0.5,
+            "lorem_ipsum": 1.0
+          }
+        },
+        "5": {
+          "mean": 0.4739583333333333,
+          "std": 0.20299140906151122,
+          "per_seq": {
+            "mit_license": 0.5,
+            "apache_license": 0.5,
+            "gpl_header": 0.7916666666666666,
+            "bsd_license": 0.5,
+            "shebang_python": 0.5,
+            "python_main": 0.5,
+            "creative_commons": 0.0,
+            "lorem_ipsum": 0.5
+          }
+        },
+        "6": {
+          "mean": 0.5494791666666666,
+          "std": 0.2884753797204557,
+          "per_seq": {
+            "mit_license": 0.10416666666666667,
+            "apache_license": 0.5,
+            "gpl_header": 0.5,
+            "bsd_license": 0.9791666666666666,
+            "shebang_python": 0.25,
+            "python_main": 0.5833333333333334,
+            "creative_commons": 0.5,
+            "lorem_ipsum": 0.9791666666666666
+          }
+        }
+      }
+    },
+    "1": {
+      "loo_true": {
+        "0": {
+          "mean": 0.5625,
+          "std": 0.16535945694153692,
+          "per_seq": {
+            "mit_license": 0.5,
+            "apache_license": 0.5,
+            "gpl_header": 1.0,
+            "bsd_license": 0.5,
+            "shebang_python": 0.5,
+            "python_main": 0.5,
+            "creative_commons": 0.5,
+            "lorem_ipsum": 0.5
+          }
+        },
+        "1": {
+          "mean": 0.6484375,
+          "std": 0.28969525340217434,
+          "per_seq": {
+            "mit_license": 0.5,
+            "apache_license": 0.5,
+            "gpl_header": 1.0,
+            "bsd_license": 0.5,
+            "shebang_python": 1.0,
+            "python_main": 0.5,
+            "creative_commons": 1.0,
+            "lorem_ipsum": 0.1875
+          }
+        },
+        "2": {
+          "mean": 0.875,
+          "std": 0.21650635094610965,
+          "per_seq": {
+            "mit_license": 1.0,
+            "apache_license": 1.0,
+            "gpl_header": 0.5,
+            "bsd_license": 1.0,
+            "shebang_python": 1.0,
+            "python_main": 1.0,
+            "creative_commons": 1.0,
+            "lorem_ipsum": 0.5
+          }
+        },
+        "3": {
+          "mean": 0.7942708333333333,
+          "std": 0.2325595195246322,
+          "per_seq": {
+            "mit_license": 0.5,
+            "apache_license": 1.0,
+            "gpl_header": 0.5,
+            "bsd_license": 0.8541666666666666,
+            "shebang_python": 1.0,
+            "python_main": 0.5,
+            "creative_commons": 1.0,
+            "lorem_ipsum": 1.0
+          }
+        },
+        "4": {
+          "mean": 0.9244791666666667,
+          "std": 0.16402115881249724,
+          "per_seq": {
+            "mit_license": 0.8958333333333334,
+            "apache_license": 1.0,
+            "gpl_header": 0.5,
+            "bsd_license": 1.0,
+            "shebang_python": 1.0,
+            "python_main": 1.0,
+            "creative_commons": 1.0,
+            "lorem_ipsum": 1.0
+          }
+        },
+        "5": {
+          "mean": 0.890625,
+          "std": 0.19200321449132043,
+          "per_seq": {
+            "mit_license": 0.625,
+            "apache_license": 1.0,
+            "gpl_header": 0.5,
+            "bsd_license": 1.0,
+            "shebang_python": 1.0,
+            "python_main": 1.0,
+            "creative_commons": 1.0,
+            "lorem_ipsum": 1.0
+          }
+        },
+        "6": {
+          "mean": 0.9921875,
+          "std": 0.014499386361536509,
+          "per_seq": {
+            "mit_license": 1.0,
+            "apache_license": 1.0,
+            "gpl_header": 0.9791666666666666,
+            "bsd_license": 1.0,
+            "shebang_python": 1.0,
+            "python_main": 1.0,
+            "creative_commons": 0.9583333333333334,
+            "lorem_ipsum": 1.0
+          }
+        }
+      },
+      "loo_pure": {
+        "0": {
+          "mean": 0.5,
+          "std": 0.0,
+          "per_seq": {
+            "pure_a_0": 0.5,
+            "pure_a_1": 0.5,
+            "pure_a_2": 0.5,
+            "pure_a_3": 0.5,
+            "pure_a_4": 0.5,
+            "pure_a_5": 0.5,
+            "pure_a_6": 0.5
+          }
+        },
+        "1": {
+          "mean": 0.5327380952380952,
+          "std": 0.24112653691106062,
+          "per_seq": {
+            "pure_a_0": 0.5625,
+            "pure_a_1": 0.5625,
+            "pure_a_2": 1.0,
+            "pure_a_3": 0.5,
+            "pure_a_4": 0.10416666666666667,
+            "pure_a_5": 0.5,
+            "pure_a_6": 0.5
+          }
+        },
+        "2": {
+          "mean": 0.5684523809523809,
+          "std": 0.11717273622041388,
+          "per_seq": {
+            "pure_a_0": 0.5416666666666666,
+            "pure_a_1": 0.8333333333333334,
+            "pure_a_2": 0.625,
+            "pure_a_3": 0.5,
+            "pure_a_4": 0.4791666666666667,
+            "pure_a_5": 0.5,
+            "pure_a_6": 0.5
+          }
+        },
+        "3": {
+          "mean": 0.5029761904761905,
+          "std": 0.16153888982276082,
+          "per_seq": {
+            "pure_a_0": 0.5,
+            "pure_a_1": 0.5,
+            "pure_a_2": 0.8125,
+            "pure_a_3": 0.5,
+            "pure_a_4": 0.20833333333333334,
+            "pure_a_5": 0.5,
+            "pure_a_6": 0.5
+          }
+        },
+        "4": {
+          "mean": 0.49404761904761907,
+          "std": 0.045526959942792725,
+          "per_seq": {
+            "pure_a_0": 0.5,
+            "pure_a_1": 0.5,
+            "pure_a_2": 0.5625,
+            "pure_a_3": 0.5,
+            "pure_a_4": 0.3958333333333333,
+            "pure_a_5": 0.5,
+            "pure_a_6": 0.5
+          }
+        },
+        "5": {
+          "mean": 0.4880952380952381,
+          "std": 0.06851705019774605,
+          "per_seq": {
+            "pure_a_0": 0.5,
+            "pure_a_1": 0.5,
+            "pure_a_2": 0.6041666666666666,
+            "pure_a_3": 0.5,
+            "pure_a_4": 0.3541666666666667,
+            "pure_a_5": 0.5,
+            "pure_a_6": 0.4583333333333333
+          }
+        },
+        "6": {
+          "mean": 0.45535714285714285,
+          "std": 0.0865657117395773,
+          "per_seq": {
+            "pure_a_0": 0.5,
+            "pure_a_1": 0.5,
+            "pure_a_2": 0.4375,
+            "pure_a_3": 0.5,
+            "pure_a_4": 0.5,
+            "pure_a_5": 0.5,
+            "pure_a_6": 0.25
+          }
+        }
+      },
+      "loo_shuffled": {
+        "0": {
+          "mean": 0.4375,
+          "std": 0.16535945694153692,
+          "per_seq": {
+            "mit_license": 0.5,
+            "apache_license": 0.5,
+            "gpl_header": 0.5,
+            "bsd_license": 0.0,
+            "shebang_python": 0.5,
+            "python_main": 0.5,
+            "creative_commons": 0.5,
+            "lorem_ipsum": 0.5
+          }
+        },
+        "1": {
+          "mean": 0.5,
+          "std": 0.3535533905932738,
+          "per_seq": {
+            "mit_license": 0.0,
+            "apache_license": 1.0,
+            "gpl_header": 1.0,
+            "bsd_license": 0.5,
+            "shebang_python": 0.5,
+            "python_main": 0.0,
+            "creative_commons": 0.5,
+            "lorem_ipsum": 0.5
+          }
+        },
+        "2": {
+          "mean": 0.625,
+          "std": 0.33071891388307384,
+          "per_seq": {
+            "mit_license": 1.0,
+            "apache_license": 0.5,
+            "gpl_header": 0.0,
+            "bsd_license": 1.0,
+            "shebang_python": 0.5,
+            "python_main": 0.5,
+            "creative_commons": 0.5,
+            "lorem_ipsum": 1.0
+          }
+        },
+        "3": {
+          "mean": 0.4427083333333333,
+          "std": 0.30113896928070344,
+          "per_seq": {
+            "mit_license": 0.0,
+            "apache_license": 0.5,
+            "gpl_header": 0.5,
+            "bsd_license": 0.5,
+            "shebang_python": 0.5416666666666666,
+            "python_main": 0.5,
+            "creative_commons": 1.0,
+            "lorem_ipsum": 0.0
+          }
+        },
+        "4": {
+          "mean": 0.49479166666666663,
+          "std": 0.34996744640275707,
+          "per_seq": {
+            "mit_license": 0.9791666666666666,
+            "apache_license": 0.5,
+            "gpl_header": 0.5,
+            "bsd_license": 0.0,
+            "shebang_python": 0.5,
+            "python_main": 1.0,
+            "creative_commons": 0.4791666666666667,
+            "lorem_ipsum": 0.0
+          }
+        },
+        "5": {
+          "mean": 0.44010416666666663,
+          "std": 0.26911262276719555,
+          "per_seq": {
+            "mit_license": 0.5,
+            "apache_license": 0.10416666666666667,
+            "gpl_header": 1.0,
+            "bsd_license": 0.5,
+            "shebang_python": 0.5,
+            "python_main": 0.08333333333333333,
+            "creative_commons": 0.3333333333333333,
+            "lorem_ipsum": 0.5
+          }
+        },
+        "6": {
+          "mean": 0.59375,
+          "std": 0.3168105484530323,
+          "per_seq": {
+            "mit_license": 0.5625,
+            "apache_license": 0.9375,
+            "gpl_header": 0.5,
+            "bsd_license": 0.8958333333333334,
+            "shebang_python": 0.0,
+            "python_main": 1.0,
+            "creative_commons": 0.3541666666666667,
+            "lorem_ipsum": 0.5
+          }
+        }
+      }
+    },
+    "2": {
+      "loo_true": {
+        "0": {
+          "mean": 0.5625,
+          "std": 0.16535945694153692,
+          "per_seq": {
+            "mit_license": 0.5,
+            "apache_license": 0.5,
+            "gpl_header": 1.0,
+            "bsd_license": 0.5,
+            "shebang_python": 0.5,
+            "python_main": 0.5,
+            "creative_commons": 0.5,
+            "lorem_ipsum": 0.5
+          }
+        },
+        "1": {
+          "mean": 0.6484375,
+          "std": 0.28969525340217434,
+          "per_seq": {
+            "mit_license": 0.5,
+            "apache_license": 0.5,
+            "gpl_header": 1.0,
+            "bsd_license": 0.5,
+            "shebang_python": 1.0,
+            "python_main": 0.5,
+            "creative_commons": 1.0,
+            "lorem_ipsum": 0.1875
+          }
+        },
+        "2": {
+          "mean": 0.875,
+          "std": 0.21650635094610965,
+          "per_seq": {
+            "mit_license": 1.0,
+            "apache_license": 1.0,
+            "gpl_header": 0.5,
+            "bsd_license": 1.0,
+            "shebang_python": 1.0,
+            "python_main": 1.0,
+            "creative_commons": 1.0,
+            "lorem_ipsum": 0.5
+          }
+        },
+        "3": {
+          "mean": 0.7942708333333333,
+          "std": 0.2325595195246322,
+          "per_seq": {
+            "mit_license": 0.5,
+            "apache_license": 1.0,
+            "gpl_header": 0.5,
+            "bsd_license": 0.8541666666666666,
+            "shebang_python": 1.0,
+            "python_main": 0.5,
+            "creative_commons": 1.0,
+            "lorem_ipsum": 1.0
+          }
+        },
+        "4": {
+          "mean": 0.9244791666666667,
+          "std": 0.16402115881249724,
+          "per_seq": {
+            "mit_license": 0.8958333333333334,
+            "apache_license": 1.0,
+            "gpl_header": 0.5,
+            "bsd_license": 1.0,
+            "shebang_python": 1.0,
+            "python_main": 1.0,
+            "creative_commons": 1.0,
+            "lorem_ipsum": 1.0
+          }
+        },
+        "5": {
+          "mean": 0.890625,
+          "std": 0.19200321449132043,
+          "per_seq": {
+            "mit_license": 0.625,
+            "apache_license": 1.0,
+            "gpl_header": 0.5,
+            "bsd_license": 1.0,
+            "shebang_python": 1.0,
+            "python_main": 1.0,
+            "creative_commons": 1.0,
+            "lorem_ipsum": 1.0
+          }
+        },
+        "6": {
+          "mean": 0.9921875,
+          "std": 0.014499386361536509,
+          "per_seq": {
+            "mit_license": 1.0,
+            "apache_license": 1.0,
+            "gpl_header": 0.9791666666666666,
+            "bsd_license": 1.0,
+            "shebang_python": 1.0,
+            "python_main": 1.0,
+            "creative_commons": 0.9583333333333334,
+            "lorem_ipsum": 1.0
+          }
+        }
+      },
+      "loo_pure": {
+        "0": {
+          "mean": 0.5,
+          "std": 0.0,
+          "per_seq": {
+            "pure_a_0": 0.5,
+            "pure_a_1": 0.5,
+            "pure_a_2": 0.5,
+            "pure_a_3": 0.5,
+            "pure_a_4": 0.5,
+            "pure_a_5": 0.5,
+            "pure_a_6": 0.5
+          }
+        },
+        "1": {
+          "mean": 0.5327380952380952,
+          "std": 0.24112653691106062,
+          "per_seq": {
+            "pure_a_0": 0.5625,
+            "pure_a_1": 0.5625,
+            "pure_a_2": 1.0,
+            "pure_a_3": 0.5,
+            "pure_a_4": 0.10416666666666667,
+            "pure_a_5": 0.5,
+            "pure_a_6": 0.5
+          }
+        },
+        "2": {
+          "mean": 0.5684523809523809,
+          "std": 0.11717273622041388,
+          "per_seq": {
+            "pure_a_0": 0.5416666666666666,
+            "pure_a_1": 0.8333333333333334,
+            "pure_a_2": 0.625,
+            "pure_a_3": 0.5,
+            "pure_a_4": 0.4791666666666667,
+            "pure_a_5": 0.5,
+            "pure_a_6": 0.5
+          }
+        },
+        "3": {
+          "mean": 0.5029761904761905,
+          "std": 0.16153888982276082,
+          "per_seq": {
+            "pure_a_0": 0.5,
+            "pure_a_1": 0.5,
+            "pure_a_2": 0.8125,
+            "pure_a_3": 0.5,
+            "pure_a_4": 0.20833333333333334,
+            "pure_a_5": 0.5,
+            "pure_a_6": 0.5
+          }
+        },
+        "4": {
+          "mean": 0.49404761904761907,
+          "std": 0.045526959942792725,
+          "per_seq": {
+            "pure_a_0": 0.5,
+            "pure_a_1": 0.5,
+            "pure_a_2": 0.5625,
+            "pure_a_3": 0.5,
+            "pure_a_4": 0.3958333333333333,
+            "pure_a_5": 0.5,
+            "pure_a_6": 0.5
+          }
+        },
+        "5": {
+          "mean": 0.4880952380952381,
+          "std": 0.06851705019774605,
+          "per_seq": {
+            "pure_a_0": 0.5,
+            "pure_a_1": 0.5,
+            "pure_a_2": 0.6041666666666666,
+            "pure_a_3": 0.5,
+            "pure_a_4": 0.3541666666666667,
+            "pure_a_5": 0.5,
+            "pure_a_6": 0.4583333333333333
+          }
+        },
+        "6": {
+          "mean": 0.45535714285714285,
+          "std": 0.0865657117395773,
+          "per_seq": {
+            "pure_a_0": 0.5,
+            "pure_a_1": 0.5,
+            "pure_a_2": 0.4375,
+            "pure_a_3": 0.5,
+            "pure_a_4": 0.5,
+            "pure_a_5": 0.5,
+            "pure_a_6": 0.25
+          }
+        }
+      },
+      "loo_shuffled": {
+        "0": {
+          "mean": 0.625,
+          "std": 0.21650635094610965,
+          "per_seq": {
+            "mit_license": 0.5,
+            "apache_license": 1.0,
+            "gpl_header": 0.5,
+            "bsd_license": 0.5,
+            "shebang_python": 0.5,
+            "python_main": 0.5,
+            "creative_commons": 1.0,
+            "lorem_ipsum": 0.5
+          }
+        },
+        "1": {
+          "mean": 0.5,
+          "std": 0.25,
+          "per_seq": {
+            "mit_license": 0.5,
+            "apache_license": 0.5,
+            "gpl_header": 0.5,
+            "bsd_license": 1.0,
+            "shebang_python": 0.5,
+            "python_main": 0.5,
+            "creative_commons": 0.5,
+            "lorem_ipsum": 0.0
+          }
+        },
+        "2": {
+          "mean": 0.29166666666666663,
+          "std": 0.25194555463432966,
+          "per_seq": {
+            "mit_license": 0.0,
+            "apache_license": 0.0,
+            "gpl_header": 0.5,
+            "bsd_license": 0.4375,
+            "shebang_python": 0.0,
+            "python_main": 0.5,
+            "creative_commons": 0.22916666666666666,
+            "lorem_ipsum": 0.6666666666666666
+          }
+        },
+        "3": {
+          "mean": 0.5625,
+          "std": 0.29973947020704494,
+          "per_seq": {
+            "mit_license": 0.5,
+            "apache_license": 0.5,
+            "gpl_header": 0.0,
+            "bsd_license": 0.5,
+            "shebang_python": 1.0,
+            "python_main": 0.5,
+            "creative_commons": 0.5,
+            "lorem_ipsum": 1.0
+          }
+        },
+        "4": {
+          "mean": 0.6588541666666666,
+          "std": 0.22509100686506286,
+          "per_seq": {
+            "mit_license": 0.5,
+            "apache_license": 0.4791666666666667,
+            "gpl_header": 0.9791666666666666,
+            "bsd_license": 1.0,
+            "shebang_python": 0.4583333333333333,
+            "python_main": 0.8541666666666666,
+            "creative_commons": 0.5,
+            "lorem_ipsum": 0.5
+          }
+        },
+        "5": {
+          "mean": 0.3828125,
+          "std": 0.4077080538876576,
+          "per_seq": {
+            "mit_license": 0.5,
+            "apache_license": 0.020833333333333332,
+            "gpl_header": 0.0,
+            "bsd_license": 0.041666666666666664,
+            "shebang_python": 1.0,
+            "python_main": 1.0,
+            "creative_commons": 0.0,
+            "lorem_ipsum": 0.5
+          }
+        },
+        "6": {
+          "mean": 0.546875,
+          "std": 0.3832639769684423,
+          "per_seq": {
+            "mit_license": 1.0,
+            "apache_license": 0.3125,
+            "gpl_header": 0.8958333333333334,
+            "bsd_license": 0.0,
+            "shebang_python": 0.6458333333333334,
+            "python_main": 0.5,
+            "creative_commons": 1.0,
+            "lorem_ipsum": 0.020833333333333332
+          }
+        }
+      }
+    },
+    "42": {
+      "loo_true": {
+        "0": {
+          "mean": 0.5625,
+          "std": 0.16535945694153692,
+          "per_seq": {
+            "mit_license": 0.5,
+            "apache_license": 0.5,
+            "gpl_header": 1.0,
+            "bsd_license": 0.5,
+            "shebang_python": 0.5,
+            "python_main": 0.5,
+            "creative_commons": 0.5,
+            "lorem_ipsum": 0.5
+          }
+        },
+        "1": {
+          "mean": 0.6484375,
+          "std": 0.28969525340217434,
+          "per_seq": {
+            "mit_license": 0.5,
+            "apache_license": 0.5,
+            "gpl_header": 1.0,
+            "bsd_license": 0.5,
+            "shebang_python": 1.0,
+            "python_main": 0.5,
+            "creative_commons": 1.0,
+            "lorem_ipsum": 0.1875
+          }
+        },
+        "2": {
+          "mean": 0.875,
+          "std": 0.21650635094610965,
+          "per_seq": {
+            "mit_license": 1.0,
+            "apache_license": 1.0,
+            "gpl_header": 0.5,
+            "bsd_license": 1.0,
+            "shebang_python": 1.0,
+            "python_main": 1.0,
+            "creative_commons": 1.0,
+            "lorem_ipsum": 0.5
+          }
+        },
+        "3": {
+          "mean": 0.7942708333333333,
+          "std": 0.2325595195246322,
+          "per_seq": {
+            "mit_license": 0.5,
+            "apache_license": 1.0,
+            "gpl_header": 0.5,
+            "bsd_license": 0.8541666666666666,
+            "shebang_python": 1.0,
+            "python_main": 0.5,
+            "creative_commons": 1.0,
+            "lorem_ipsum": 1.0
+          }
+        },
+        "4": {
+          "mean": 0.9244791666666667,
+          "std": 0.16402115881249724,
+          "per_seq": {
+            "mit_license": 0.8958333333333334,
+            "apache_license": 1.0,
+            "gpl_header": 0.5,
+            "bsd_license": 1.0,
+            "shebang_python": 1.0,
+            "python_main": 1.0,
+            "creative_commons": 1.0,
+            "lorem_ipsum": 1.0
+          }
+        },
+        "5": {
+          "mean": 0.890625,
+          "std": 0.19200321449132043,
+          "per_seq": {
+            "mit_license": 0.625,
+            "apache_license": 1.0,
+            "gpl_header": 0.5,
+            "bsd_license": 1.0,
+            "shebang_python": 1.0,
+            "python_main": 1.0,
+            "creative_commons": 1.0,
+            "lorem_ipsum": 1.0
+          }
+        },
+        "6": {
+          "mean": 0.9921875,
+          "std": 0.014499386361536509,
+          "per_seq": {
+            "mit_license": 1.0,
+            "apache_license": 1.0,
+            "gpl_header": 0.9791666666666666,
+            "bsd_license": 1.0,
+            "shebang_python": 1.0,
+            "python_main": 1.0,
+            "creative_commons": 0.9583333333333334,
+            "lorem_ipsum": 1.0
+          }
+        }
+      },
+      "loo_pure": {
+        "0": {
+          "mean": 0.5,
+          "std": 0.0,
+          "per_seq": {
+            "pure_a_0": 0.5,
+            "pure_a_1": 0.5,
+            "pure_a_2": 0.5,
+            "pure_a_3": 0.5,
+            "pure_a_4": 0.5,
+            "pure_a_5": 0.5,
+            "pure_a_6": 0.5
+          }
+        },
+        "1": {
+          "mean": 0.5327380952380952,
+          "std": 0.24112653691106062,
+          "per_seq": {
+            "pure_a_0": 0.5625,
+            "pure_a_1": 0.5625,
+            "pure_a_2": 1.0,
+            "pure_a_3": 0.5,
+            "pure_a_4": 0.10416666666666667,
+            "pure_a_5": 0.5,
+            "pure_a_6": 0.5
+          }
+        },
+        "2": {
+          "mean": 0.5684523809523809,
+          "std": 0.11717273622041388,
+          "per_seq": {
+            "pure_a_0": 0.5416666666666666,
+            "pure_a_1": 0.8333333333333334,
+            "pure_a_2": 0.625,
+            "pure_a_3": 0.5,
+            "pure_a_4": 0.4791666666666667,
+            "pure_a_5": 0.5,
+            "pure_a_6": 0.5
+          }
+        },
+        "3": {
+          "mean": 0.5029761904761905,
+          "std": 0.16153888982276082,
+          "per_seq": {
+            "pure_a_0": 0.5,
+            "pure_a_1": 0.5,
+            "pure_a_2": 0.8125,
+            "pure_a_3": 0.5,
+            "pure_a_4": 0.20833333333333334,
+            "pure_a_5": 0.5,
+            "pure_a_6": 0.5
+          }
+        },
+        "4": {
+          "mean": 0.49404761904761907,
+          "std": 0.045526959942792725,
+          "per_seq": {
+            "pure_a_0": 0.5,
+            "pure_a_1": 0.5,
+            "pure_a_2": 0.5625,
+            "pure_a_3": 0.5,
+            "pure_a_4": 0.3958333333333333,
+            "pure_a_5": 0.5,
+            "pure_a_6": 0.5
+          }
+        },
+        "5": {
+          "mean": 0.4880952380952381,
+          "std": 0.06851705019774605,
+          "per_seq": {
+            "pure_a_0": 0.5,
+            "pure_a_1": 0.5,
+            "pure_a_2": 0.6041666666666666,
+            "pure_a_3": 0.5,
+            "pure_a_4": 0.3541666666666667,
+            "pure_a_5": 0.5,
+            "pure_a_6": 0.4583333333333333
+          }
+        },
+        "6": {
+          "mean": 0.45535714285714285,
+          "std": 0.0865657117395773,
+          "per_seq": {
+            "pure_a_0": 0.5,
+            "pure_a_1": 0.5,
+            "pure_a_2": 0.4375,
+            "pure_a_3": 0.5,
+            "pure_a_4": 0.5,
+            "pure_a_5": 0.5,
+            "pure_a_6": 0.25
+          }
+        }
+      },
+      "loo_shuffled": {
+        "0": {
+          "mean": 0.5,
+          "std": 0.25,
+          "per_seq": {
+            "mit_license": 0.5,
+            "apache_license": 0.5,
+            "gpl_header": 0.5,
+            "bsd_license": 0.0,
+            "shebang_python": 0.5,
+            "python_main": 1.0,
+            "creative_commons": 0.5,
+            "lorem_ipsum": 0.5
+          }
+        },
+        "1": {
+          "mean": 0.5,
+          "std": 0.3535533905932738,
+          "per_seq": {
+            "mit_license": 1.0,
+            "apache_license": 1.0,
+            "gpl_header": 0.0,
+            "bsd_license": 0.0,
+            "shebang_python": 0.5,
+            "python_main": 0.5,
+            "creative_commons": 0.5,
+            "lorem_ipsum": 0.5
+          }
+        },
+        "2": {
+          "mean": 0.5807291666666667,
+          "std": 0.3861813219911873,
+          "per_seq": {
+            "mit_license": 0.5,
+            "apache_license": 1.0,
+            "gpl_header": 0.0,
+            "bsd_license": 0.6875,
+            "shebang_python": 1.0,
+            "python_main": 0.5,
+            "creative_commons": 0.9583333333333334,
+            "lorem_ipsum": 0.0
+          }
+        },
+        "3": {
+          "mean": 0.41666666666666663,
+          "std": 0.3004626062886658,
+          "per_seq": {
+            "mit_license": 0.5,
+            "apache_license": 0.3333333333333333,
+            "gpl_header": 0.5,
+            "bsd_license": 1.0,
+            "shebang_python": 0.5,
+            "python_main": 0.5,
+            "creative_commons": 0.0,
+            "lorem_ipsum": 0.0
+          }
+        },
+        "4": {
+          "mean": 0.6692708333333334,
+          "std": 0.24659959585750205,
+          "per_seq": {
+            "mit_license": 0.5,
+            "apache_license": 0.4583333333333333,
+            "gpl_header": 0.5,
+            "bsd_license": 0.9583333333333334,
+            "shebang_python": 0.4375,
+            "python_main": 1.0,
+            "creative_commons": 1.0,
+            "lorem_ipsum": 0.5
+          }
+        },
+        "5": {
+          "mean": 0.48177083333333337,
+          "std": 0.395344750550952,
+          "per_seq": {
+            "mit_license": 0.8958333333333334,
+            "apache_license": 0.041666666666666664,
+            "gpl_header": 0.5,
+            "bsd_license": 0.020833333333333332,
+            "shebang_python": 0.8958333333333334,
+            "python_main": 0.5,
+            "creative_commons": 0.0,
+            "lorem_ipsum": 1.0
+          }
+        },
+        "6": {
+          "mean": 0.6901041666666667,
+          "std": 0.2050357512440073,
+          "per_seq": {
+            "mit_license": 0.5,
+            "apache_license": 0.75,
+            "gpl_header": 1.0,
+            "bsd_license": 0.5208333333333334,
+            "shebang_python": 0.5,
+            "python_main": 0.5,
+            "creative_commons": 0.75,
+            "lorem_ipsum": 1.0
+          }
+        }
+      }
+    },
+    "99": {
+      "loo_true": {
+        "0": {
+          "mean": 0.5625,
+          "std": 0.16535945694153692,
+          "per_seq": {
+            "mit_license": 0.5,
+            "apache_license": 0.5,
+            "gpl_header": 1.0,
+            "bsd_license": 0.5,
+            "shebang_python": 0.5,
+            "python_main": 0.5,
+            "creative_commons": 0.5,
+            "lorem_ipsum": 0.5
+          }
+        },
+        "1": {
+          "mean": 0.6484375,
+          "std": 0.28969525340217434,
+          "per_seq": {
+            "mit_license": 0.5,
+            "apache_license": 0.5,
+            "gpl_header": 1.0,
+            "bsd_license": 0.5,
+            "shebang_python": 1.0,
+            "python_main": 0.5,
+            "creative_commons": 1.0,
+            "lorem_ipsum": 0.1875
+          }
+        },
+        "2": {
+          "mean": 0.875,
+          "std": 0.21650635094610965,
+          "per_seq": {
+            "mit_license": 1.0,
+            "apache_license": 1.0,
+            "gpl_header": 0.5,
+            "bsd_license": 1.0,
+            "shebang_python": 1.0,
+            "python_main": 1.0,
+            "creative_commons": 1.0,
+            "lorem_ipsum": 0.5
+          }
+        },
+        "3": {
+          "mean": 0.7942708333333333,
+          "std": 0.2325595195246322,
+          "per_seq": {
+            "mit_license": 0.5,
+            "apache_license": 1.0,
+            "gpl_header": 0.5,
+            "bsd_license": 0.8541666666666666,
+            "shebang_python": 1.0,
+            "python_main": 0.5,
+            "creative_commons": 1.0,
+            "lorem_ipsum": 1.0
+          }
+        },
+        "4": {
+          "mean": 0.9244791666666667,
+          "std": 0.16402115881249724,
+          "per_seq": {
+            "mit_license": 0.8958333333333334,
+            "apache_license": 1.0,
+            "gpl_header": 0.5,
+            "bsd_license": 1.0,
+            "shebang_python": 1.0,
+            "python_main": 1.0,
+            "creative_commons": 1.0,
+            "lorem_ipsum": 1.0
+          }
+        },
+        "5": {
+          "mean": 0.890625,
+          "std": 0.19200321449132043,
+          "per_seq": {
+            "mit_license": 0.625,
+            "apache_license": 1.0,
+            "gpl_header": 0.5,
+            "bsd_license": 1.0,
+            "shebang_python": 1.0,
+            "python_main": 1.0,
+            "creative_commons": 1.0,
+            "lorem_ipsum": 1.0
+          }
+        },
+        "6": {
+          "mean": 0.9921875,
+          "std": 0.014499386361536509,
+          "per_seq": {
+            "mit_license": 1.0,
+            "apache_license": 1.0,
+            "gpl_header": 0.9791666666666666,
+            "bsd_license": 1.0,
+            "shebang_python": 1.0,
+            "python_main": 1.0,
+            "creative_commons": 0.9583333333333334,
+            "lorem_ipsum": 1.0
+          }
+        }
+      },
+      "loo_pure": {
+        "0": {
+          "mean": 0.5,
+          "std": 0.0,
+          "per_seq": {
+            "pure_a_0": 0.5,
+            "pure_a_1": 0.5,
+            "pure_a_2": 0.5,
+            "pure_a_3": 0.5,
+            "pure_a_4": 0.5,
+            "pure_a_5": 0.5,
+            "pure_a_6": 0.5
+          }
+        },
+        "1": {
+          "mean": 0.5327380952380952,
+          "std": 0.24112653691106062,
+          "per_seq": {
+            "pure_a_0": 0.5625,
+            "pure_a_1": 0.5625,
+            "pure_a_2": 1.0,
+            "pure_a_3": 0.5,
+            "pure_a_4": 0.10416666666666667,
+            "pure_a_5": 0.5,
+            "pure_a_6": 0.5
+          }
+        },
+        "2": {
+          "mean": 0.5684523809523809,
+          "std": 0.11717273622041388,
+          "per_seq": {
+            "pure_a_0": 0.5416666666666666,
+            "pure_a_1": 0.8333333333333334,
+            "pure_a_2": 0.625,
+            "pure_a_3": 0.5,
+            "pure_a_4": 0.4791666666666667,
+            "pure_a_5": 0.5,
+            "pure_a_6": 0.5
+          }
+        },
+        "3": {
+          "mean": 0.5029761904761905,
+          "std": 0.16153888982276082,
+          "per_seq": {
+            "pure_a_0": 0.5,
+            "pure_a_1": 0.5,
+            "pure_a_2": 0.8125,
+            "pure_a_3": 0.5,
+            "pure_a_4": 0.20833333333333334,
+            "pure_a_5": 0.5,
+            "pure_a_6": 0.5
+          }
+        },
+        "4": {
+          "mean": 0.49404761904761907,
+          "std": 0.045526959942792725,
+          "per_seq": {
+            "pure_a_0": 0.5,
+            "pure_a_1": 0.5,
+            "pure_a_2": 0.5625,
+            "pure_a_3": 0.5,
+            "pure_a_4": 0.3958333333333333,
+            "pure_a_5": 0.5,
+            "pure_a_6": 0.5
+          }
+        },
+        "5": {
+          "mean": 0.4880952380952381,
+          "std": 0.06851705019774605,
+          "per_seq": {
+            "pure_a_0": 0.5,
+            "pure_a_1": 0.5,
+            "pure_a_2": 0.6041666666666666,
+            "pure_a_3": 0.5,
+            "pure_a_4": 0.3541666666666667,
+            "pure_a_5": 0.5,
+            "pure_a_6": 0.4583333333333333
+          }
+        },
+        "6": {
+          "mean": 0.45535714285714285,
+          "std": 0.0865657117395773,
+          "per_seq": {
+            "pure_a_0": 0.5,
+            "pure_a_1": 0.5,
+            "pure_a_2": 0.4375,
+            "pure_a_3": 0.5,
+            "pure_a_4": 0.5,
+            "pure_a_5": 0.5,
+            "pure_a_6": 0.25
+          }
+        }
+      },
+      "loo_shuffled": {
+        "0": {
+          "mean": 0.5,
+          "std": 0.0,
+          "per_seq": {
+            "mit_license": 0.5,
+            "apache_license": 0.5,
+            "gpl_header": 0.5,
+            "bsd_license": 0.5,
+            "shebang_python": 0.5,
+            "python_main": 0.5,
+            "creative_commons": 0.5,
+            "lorem_ipsum": 0.5
+          }
+        },
+        "1": {
+          "mean": 0.5234375,
+          "std": 0.20714177474316955,
+          "per_seq": {
+            "mit_license": 0.5,
+            "apache_license": 0.5,
+            "gpl_header": 0.1875,
+            "bsd_license": 1.0,
+            "shebang_python": 0.5,
+            "python_main": 0.5,
+            "creative_commons": 0.5,
+            "lorem_ipsum": 0.5
+          }
+        },
+        "2": {
+          "mean": 0.625,
+          "std": 0.21650635094610965,
+          "per_seq": {
+            "mit_license": 0.5,
+            "apache_license": 0.5,
+            "gpl_header": 0.5,
+            "bsd_license": 0.5,
+            "shebang_python": 1.0,
+            "python_main": 0.5,
+            "creative_commons": 0.5,
+            "lorem_ipsum": 1.0
+          }
+        },
+        "3": {
+          "mean": 0.40364583333333337,
+          "std": 0.29332443686201237,
+          "per_seq": {
+            "mit_license": 0.5,
+            "apache_license": 0.0,
+            "gpl_header": 0.5,
+            "bsd_license": 0.9583333333333334,
+            "shebang_python": 0.5,
+            "python_main": 0.0,
+            "creative_commons": 0.2708333333333333,
+            "lorem_ipsum": 0.5
+          }
+        },
+        "4": {
+          "mean": 0.5833333333333334,
+          "std": 0.31885891385445764,
+          "per_seq": {
+            "mit_license": 1.0,
+            "apache_license": 0.5,
+            "gpl_header": 0.0,
+            "bsd_license": 0.3541666666666667,
+            "shebang_python": 1.0,
+            "python_main": 0.8125,
+            "creative_commons": 0.5,
+            "lorem_ipsum": 0.5
+          }
+        },
+        "5": {
+          "mean": 0.4739583333333333,
+          "std": 0.12046909902312891,
+          "per_seq": {
+            "mit_license": 0.4791666666666667,
+            "apache_license": 0.5625,
+            "gpl_header": 0.5,
+            "bsd_license": 0.16666666666666666,
+            "shebang_python": 0.5416666666666666,
+            "python_main": 0.5,
+            "creative_commons": 0.4791666666666667,
+            "lorem_ipsum": 0.5625
+          }
+        },
+        "6": {
+          "mean": 0.6276041666666667,
+          "std": 0.23580294176229014,
+          "per_seq": {
+            "mit_license": 0.3125,
+            "apache_license": 0.4791666666666667,
+            "gpl_header": 0.5,
+            "bsd_license": 0.5,
+            "shebang_python": 0.4791666666666667,
+            "python_main": 0.8125,
+            "creative_commons": 1.0,
+            "lorem_ipsum": 0.9375
+          }
+        }
+      }
+    }
+  },
+  "aggregate": {
+    "per_seed_mean_gaps": [
+      0.34722222222222227,
+      0.34722222222222227,
+      0.34722222222222227,
+      0.34722222222222227,
+      0.34722222222222227
+    ],
+    "per_seed_peak_gaps": [
+      0.5368303571428572,
+      0.5368303571428572,
+      0.5368303571428572,
+      0.5368303571428572,
+      0.5368303571428572
+    ],
+    "mean_gap_mean": 0.34722222222222227,
+    "mean_gap_std": 0.0,
+    "peak_gap_mean": 0.5368303571428572,
+    "peak_gap_std": 0.0
+  }
+}

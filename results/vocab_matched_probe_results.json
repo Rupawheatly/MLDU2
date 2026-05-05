@@ -1,0 +1,11 @@
+{
+  "A_standard": {
+    "p_secret": 0.00011991607065475837,
+    "probe_standard": 1.0
+  },
+  "B_matched": {
+    "p_secret": 0.00013984063789829353,
+    "probe_standard": 1.0,
+    "probe_lexical_control": 1.0
+  }
+}

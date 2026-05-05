@@ -1,0 +1,35 @@
+{
+  "description": "Bootstrap 95% CIs for all probe results. n=150 samples, 2000 bootstrap iterations.",
+  "results": {
+    "original": {
+      "acc": 1.0,
+      "ci_lo": 0.4,
+      "ci_hi": 0.6111111111111112
+    },
+    "mldu_unlearned": {
+      "acc": 1.0,
+      "ci_lo": 0.4,
+      "ci_hi": 0.6111111111111112
+    },
+    "random_init": {
+      "acc": 1.0,
+      "ci_lo": 0.4,
+      "ci_hi": 0.6111111111111112
+    },
+    "emb_zeroing": {
+      "acc": 1.0,
+      "ci_lo": 0.4,
+      "ci_hi": 0.6111111111111112
+    },
+    "emb_depth_orig": {
+      "acc": 1.0,
+      "ci_lo": 0.4,
+      "ci_hi": 0.6111111111111112
+    },
+    "emb_depth_unl": {
+      "acc": 1.0,
+      "ci_lo": 0.4,
+      "ci_hi": 0.6111111111111112
+    }
+  }
+}

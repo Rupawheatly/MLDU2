@@ -1,0 +1,15 @@
+{
+  "experiment": "wv_only_ablation_v2",
+  "fix": "next-token LM loss + ALPHA=50",
+  "final_p_secret": 3.478696953607141e-06,
+  "final_probe_acc": 1.0,
+  "final_ppl": 1.175847493674864,
+  "paper_table2_expected": {
+    "p_secret": 0.0206,
+    "probe": 1.0,
+    "ppl": 1.2
+  },
+  "behavioural_erasure": true,
+  "representational_retention": true,
+  "capability_preserved": true
+}

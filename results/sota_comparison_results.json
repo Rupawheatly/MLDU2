@@ -1,0 +1,44 @@
+{
+  "GA": {
+    "family": "Divergence",
+    "p": 0.9999998807907104,
+    "ppl": 382.24740211092154,
+    "probe": 1.0,
+    "params_pct": 100.0
+  },
+  "NPO": {
+    "family": "Divergence",
+    "p": 5.541247257052906e-13,
+    "ppl": 4.831612065347632,
+    "probe": 1.0,
+    "params_pct": 100.0
+  },
+  "SimNPO": {
+    "family": "Divergence",
+    "p": 0.00011887891014339402,
+    "ppl": 3.8916941550814936,
+    "probe": 1.0,
+    "params_pct": 100.0
+  },
+  "RMU": {
+    "family": "Representation",
+    "p": 2.2517962861456908e-05,
+    "ppl": 403.3247468521457,
+    "probe": 1.0,
+    "params_pct": 26.089703095388504
+  },
+  "IDK": {
+    "family": "Rejection",
+    "p": 4.2223256002671405e-08,
+    "ppl": 4.723287146397404,
+    "probe": 1.0,
+    "params_pct": 100.0
+  },
+  "MLDU (ours)": {
+    "family": "Mechanistic",
+    "p": 0.0001335812994511798,
+    "ppl": 336.7150599942215,
+    "probe": 1.0,
+    "params_pct": 0.7580543272267846
+  }
+}

@@ -1,0 +1,835 @@
+{
+  "model": "gpt2-medium",
+  "n_layers": 24,
+  "d_model": 1024,
+  "valid_keys": [
+    "mit_license",
+    "apache_license",
+    "gpl_header",
+    "bsd_license",
+    "python_main",
+    "creative_commons",
+    "lorem_ipsum"
+  ],
+  "cluster_map": {
+    "mit_license": "legal",
+    "apache_license": "legal",
+    "gpl_header": "legal",
+    "bsd_license": "legal",
+    "python_main": "code",
+    "creative_commons": "web",
+    "lorem_ipsum": "placeholder"
+  },
+  "screening": {
+    "mit_license": {
+      "mem_logp": -0.12097402662038803,
+      "ctl_logp": -4.06212854385376,
+      "B_logp": -4.0932440757751465,
+      "valid": true
+    },
+    "apache_license": {
+      "mem_logp": -0.09938587993383408,
+      "ctl_logp": -3.749962329864502,
+      "B_logp": -3.7666425704956055,
+      "valid": true
+    },
+    "gpl_header": {
+      "mem_logp": -0.3106174170970917,
+      "ctl_logp": -4.5927629470825195,
+      "B_logp": -5.1993865966796875,
+      "valid": true
+    },
+    "bsd_license": {
+      "mem_logp": -0.17987656593322754,
+      "ctl_logp": -3.8035528659820557,
+      "B_logp": -4.380833148956299,
+      "valid": true
+    },
+    "shebang_python": {
+      "mem_logp": -1.1472238302230835,
+      "ctl_logp": -2.393583297729492,
+      "B_logp": -3.8229825496673584,
+      "valid": false
+    },
+    "python_main": {
+      "mem_logp": -1.3316054344177246,
+      "ctl_logp": -3.052564859390259,
+      "B_logp": -3.3146893978118896,
+      "valid": true
+    },
+    "wikipedia_python": {
+      "mem_logp": -2.43672776222229,
+      "ctl_logp": -5.130362033843994,
+      "B_logp": -5.087464332580566,
+      "valid": false
+    },
+    "creative_commons": {
+      "mem_logp": -0.5212963223457336,
+      "ctl_logp": -3.805474042892456,
+      "B_logp": -3.9703705310821533,
+      "valid": true
+    },
+    "lorem_ipsum": {
+      "mem_logp": -0.17601941525936127,
+      "ctl_logp": -4.942084312438965,
+      "B_logp": -4.970466136932373,
+      "valid": true
+    }
+  },
+  "loo_true": {
+    "0": {
+      "mean": 0.3541666666666667,
+      "std": 0.31120764517070976,
+      "per_seq": {
+        "mit_license": 0.8958333333333334,
+        "apache_license": 0.041666666666666664,
+        "gpl_header": 0.5,
+        "bsd_license": 0.041666666666666664,
+        "python_main": 0.5,
+        "creative_commons": 0.0,
+        "lorem_ipsum": 0.5
+      }
+    },
+    "1": {
+      "mean": 0.5208333333333334,
+      "std": 0.23064996154759004,
+      "per_seq": {
+        "mit_license": 0.5,
+        "apache_license": 0.5,
+        "gpl_header": 1.0,
+        "bsd_license": 0.5,
+        "python_main": 0.5,
+        "creative_commons": 0.5,
+        "lorem_ipsum": 0.14583333333333334
+      }
+    },
+    "2": {
+      "mean": 0.5714285714285714,
+      "std": 0.1749635530559413,
+      "per_seq": {
+        "mit_license": 0.5,
+        "apache_license": 0.5,
+        "gpl_header": 1.0,
+        "bsd_license": 0.5,
+        "python_main": 0.5,
+        "creative_commons": 0.5,
+        "lorem_ipsum": 0.5
+      }
+    },
+    "3": {
+      "mean": 0.5714285714285714,
+      "std": 0.31943828249996997,
+      "per_seq": {
+        "mit_license": 0.5,
+        "apache_license": 0.5,
+        "gpl_header": 1.0,
+        "bsd_license": 1.0,
+        "python_main": 0.5,
+        "creative_commons": 0.0,
+        "lorem_ipsum": 0.5
+      }
+    },
+    "4": {
+      "mean": 0.6428571428571429,
+      "std": 0.22587697572631282,
+      "per_seq": {
+        "mit_license": 0.5,
+        "apache_license": 0.5,
+        "gpl_header": 1.0,
+        "bsd_license": 1.0,
+        "python_main": 0.5,
+        "creative_commons": 0.5,
+        "lorem_ipsum": 0.5
+      }
+    },
+    "5": {
+      "mean": 0.6428571428571429,
+      "std": 0.22587697572631282,
+      "per_seq": {
+        "mit_license": 0.5,
+        "apache_license": 0.5,
+        "gpl_header": 1.0,
+        "bsd_license": 1.0,
+        "python_main": 0.5,
+        "creative_commons": 0.5,
+        "lorem_ipsum": 0.5
+      }
+    },
+    "6": {
+      "mean": 0.6398809523809523,
+      "std": 0.2212412802386405,
+      "per_seq": {
+        "mit_license": 0.5,
+        "apache_license": 0.5,
+        "gpl_header": 0.9791666666666666,
+        "bsd_license": 1.0,
+        "python_main": 0.5,
+        "creative_commons": 0.5,
+        "lorem_ipsum": 0.5
+      }
+    },
+    "7": {
+      "mean": 0.5476190476190477,
+      "std": 0.08748177652797065,
+      "per_seq": {
+        "mit_license": 0.5,
+        "apache_license": 0.5,
+        "gpl_header": 0.75,
+        "bsd_license": 0.5833333333333334,
+        "python_main": 0.5,
+        "creative_commons": 0.5,
+        "lorem_ipsum": 0.5
+      }
+    },
+    "8": {
+      "mean": 0.625,
+      "std": 0.1988932672214717,
+      "per_seq": {
+        "mit_license": 0.5,
+        "apache_license": 0.5,
+        "gpl_header": 0.8958333333333334,
+        "bsd_license": 0.5,
+        "python_main": 0.5,
+        "creative_commons": 0.9791666666666666,
+        "lorem_ipsum": 0.5
+      }
+    },
+    "9": {
+      "mean": 0.7113095238095237,
+      "std": 0.24408391135491278,
+      "per_seq": {
+        "mit_license": 0.5,
+        "apache_license": 0.5,
+        "gpl_header": 0.9791666666666666,
+        "bsd_license": 1.0,
+        "python_main": 0.5,
+        "creative_commons": 1.0,
+        "lorem_ipsum": 0.5
+      }
+    },
+    "10": {
+      "mean": 0.7083333333333334,
+      "std": 0.24090602791485788,
+      "per_seq": {
+        "mit_license": 0.5,
+        "apache_license": 0.5,
+        "gpl_header": 0.9583333333333334,
+        "bsd_license": 1.0,
+        "python_main": 0.5,
+        "creative_commons": 1.0,
+        "lorem_ipsum": 0.5
+      }
+    },
+    "11": {
+      "mean": 0.7142857142857143,
+      "std": 0.24743582965269675,
+      "per_seq": {
+        "mit_license": 0.5,
+        "apache_license": 0.5,
+        "gpl_header": 1.0,
+        "bsd_license": 1.0,
+        "python_main": 0.5,
+        "creative_commons": 1.0,
+        "lorem_ipsum": 0.5
+      }
+    },
+    "12": {
+      "mean": 0.8452380952380952,
+      "std": 0.21902820824969166,
+      "per_seq": {
+        "mit_license": 0.9583333333333334,
+        "apache_license": 0.9583333333333334,
+        "gpl_header": 1.0,
+        "bsd_license": 1.0,
+        "python_main": 0.5,
+        "creative_commons": 1.0,
+        "lorem_ipsum": 0.5
+      }
+    },
+    "13": {
+      "mean": 0.8541666666666666,
+      "std": 0.2241053642501988,
+      "per_seq": {
+        "mit_license": 0.9791666666666666,
+        "apache_license": 1.0,
+        "gpl_header": 1.0,
+        "bsd_license": 1.0,
+        "python_main": 0.5,
+        "creative_commons": 1.0,
+        "lorem_ipsum": 0.5
+      }
+    },
+    "14": {
+      "mean": 0.8571428571428571,
+      "std": 0.22587697572631282,
+      "per_seq": {
+        "mit_license": 1.0,
+        "apache_license": 1.0,
+        "gpl_header": 1.0,
+        "bsd_license": 1.0,
+        "python_main": 0.5,
+        "creative_commons": 1.0,
+        "lorem_ipsum": 0.5
+      }
+    },
+    "15": {
+      "mean": 0.8541666666666666,
+      "std": 0.2241053642501988,
+      "per_seq": {
+        "mit_license": 0.9791666666666666,
+        "apache_license": 1.0,
+        "gpl_header": 1.0,
+        "bsd_license": 1.0,
+        "python_main": 0.5,
+        "creative_commons": 1.0,
+        "lorem_ipsum": 0.5
+      }
+    },
+    "16": {
+      "mean": 0.8571428571428571,
+      "std": 0.22587697572631282,
+      "per_seq": {
+        "mit_license": 1.0,
+        "apache_license": 1.0,
+        "gpl_header": 1.0,
+        "bsd_license": 1.0,
+        "python_main": 0.5,
+        "creative_commons": 1.0,
+        "lorem_ipsum": 0.5
+      }
+    },
+    "17": {
+      "mean": 0.8125,
+      "std": 0.2241053642501988,
+      "per_seq": {
+        "mit_license": 0.6875,
+        "apache_license": 1.0,
+        "gpl_header": 1.0,
+        "bsd_license": 1.0,
+        "python_main": 0.5,
+        "creative_commons": 1.0,
+        "lorem_ipsum": 0.5
+      }
+    },
+    "18": {
+      "mean": 0.8541666666666666,
+      "std": 0.2241053642501988,
+      "per_seq": {
+        "mit_license": 0.9791666666666666,
+        "apache_license": 1.0,
+        "gpl_header": 1.0,
+        "bsd_license": 1.0,
+        "python_main": 0.5,
+        "creative_commons": 1.0,
+        "lorem_ipsum": 0.5
+      }
+    },
+    "19": {
+      "mean": 0.824404761904762,
+      "std": 0.2193111122254826,
+      "per_seq": {
+        "mit_license": 0.7708333333333334,
+        "apache_license": 1.0,
+        "gpl_header": 1.0,
+        "bsd_license": 1.0,
+        "python_main": 0.5,
+        "creative_commons": 1.0,
+        "lorem_ipsum": 0.5
+      }
+    },
+    "20": {
+      "mean": 0.8541666666666666,
+      "std": 0.2019866607256804,
+      "per_seq": {
+        "mit_license": 0.5,
+        "apache_license": 1.0,
+        "gpl_header": 1.0,
+        "bsd_license": 1.0,
+        "python_main": 0.5833333333333334,
+        "creative_commons": 1.0,
+        "lorem_ipsum": 0.8958333333333334
+      }
+    },
+    "21": {
+      "mean": 0.9523809523809523,
+      "std": 0.11664236870396089,
+      "per_seq": {
+        "mit_license": 0.6666666666666666,
+        "apache_license": 1.0,
+        "gpl_header": 1.0,
+        "bsd_license": 1.0,
+        "python_main": 1.0,
+        "creative_commons": 1.0,
+        "lorem_ipsum": 1.0
+      }
+    },
+    "22": {
+      "mean": 0.9404761904761906,
+      "std": 0.1458029608799511,
+      "per_seq": {
+        "mit_license": 0.5833333333333334,
+        "apache_license": 1.0,
+        "gpl_header": 1.0,
+        "bsd_license": 1.0,
+        "python_main": 1.0,
+        "creative_commons": 1.0,
+        "lorem_ipsum": 1.0
+      }
+    },
+    "23": {
+      "mean": 0.8571428571428571,
+      "std": 0.22587697572631282,
+      "per_seq": {
+        "mit_license": 0.5,
+        "apache_license": 1.0,
+        "gpl_header": 1.0,
+        "bsd_license": 1.0,
+        "python_main": 0.5,
+        "creative_commons": 1.0,
+        "lorem_ipsum": 1.0
+      }
+    },
+    "24": {
+      "mean": 0.7142857142857143,
+      "std": 0.24743582965269675,
+      "per_seq": {
+        "mit_license": 1.0,
+        "apache_license": 1.0,
+        "gpl_header": 0.5,
+        "bsd_license": 1.0,
+        "python_main": 0.5,
+        "creative_commons": 0.5,
+        "lorem_ipsum": 0.5
+      }
+    }
+  },
+  "loo_shuffled": {
+    "0": {
+      "mean": 0.5666666666666667,
+      "std": 0.03828079807336553
+    },
+    "1": {
+      "mean": 0.44107142857142856,
+      "std": 0.05066172102607908
+    },
+    "2": {
+      "mean": 0.3904761904761904,
+      "std": 0.08857654875113465
+    },
+    "3": {
+      "mean": 0.44404761904761897,
+      "std": 0.09459230455820733
+    },
+    "4": {
+      "mean": 0.511904761904762,
+      "std": 0.1146200466848658
+    },
+    "5": {
+      "mean": 0.4833333333333333,
+      "std": 0.06759556936465899
+    },
+    "6": {
+      "mean": 0.47440476190476194,
+      "std": 0.020499018283003063
+    },
+    "7": {
+      "mean": 0.4636904761904762,
+      "std": 0.039050522540135066
+    },
+    "8": {
+      "mean": 0.4428571428571429,
+      "std": 0.11367956816282809
+    },
+    "9": {
+      "mean": 0.4583333333333333,
+      "std": 0.1407583928938805
+    },
+    "10": {
+      "mean": 0.4630952380952381,
+      "std": 0.0650309537321317
+    },
+    "11": {
+      "mean": 0.40714285714285714,
+      "std": 0.11032638139102996
+    },
+    "12": {
+      "mean": 0.43809523809523815,
+      "std": 0.08235824074489514
+    },
+    "13": {
+      "mean": 0.42857142857142855,
+      "std": 0.06388765649999398
+    },
+    "14": {
+      "mean": 0.3916666666666667,
+      "std": 0.09652405619344996
+    },
+    "15": {
+      "mean": 0.40714285714285714,
+      "std": 0.09593125727545208
+    },
+    "16": {
+      "mean": 0.4291666666666667,
+      "std": 0.09535706854524188
+    },
+    "17": {
+      "mean": 0.4196428571428571,
+      "std": 0.1449988271123101
+    },
+    "18": {
+      "mean": 0.36666666666666664,
+      "std": 0.17551349994268683
+    },
+    "19": {
+      "mean": 0.40654761904761905,
+      "std": 0.140135280444993
+    },
+    "20": {
+      "mean": 0.3910714285714286,
+      "std": 0.11787517899511017
+    },
+    "21": {
+      "mean": 0.41428571428571426,
+      "std": 0.1972152357358559
+    },
+    "22": {
+      "mean": 0.45357142857142857,
+      "std": 0.18117741333301132
+    },
+    "23": {
+      "mean": 0.38869047619047614,
+      "std": 0.22103780163258702
+    },
+    "24": {
+      "mean": 0.4125,
+      "std": 0.16155643552458818
+    }
+  },
+  "loo_pure": {
+    "0": {
+      "mean": 0.5357142857142857,
+      "std": 0.24466385612576913,
+      "per_seq": {
+        "mit_license": 0.5,
+        "apache_license": 0.0625,
+        "gpl_header": 0.5,
+        "bsd_license": 0.8333333333333334,
+        "python_main": 0.8541666666666666,
+        "creative_commons": 0.5,
+        "lorem_ipsum": 0.5
+      }
+    },
+    "1": {
+      "mean": 0.5476190476190477,
+      "std": 0.11664236870396089,
+      "per_seq": {
+        "mit_license": 0.5,
+        "apache_license": 0.5,
+        "gpl_header": 0.5,
+        "bsd_license": 0.8333333333333334,
+        "python_main": 0.5,
+        "creative_commons": 0.5,
+        "lorem_ipsum": 0.5
+      }
+    },
+    "2": {
+      "mean": 0.4970238095238096,
+      "std": 0.0072901480439975476,
+      "per_seq": {
+        "mit_license": 0.5,
+        "apache_license": 0.5,
+        "gpl_header": 0.5,
+        "bsd_license": 0.4791666666666667,
+        "python_main": 0.5,
+        "creative_commons": 0.5,
+        "lorem_ipsum": 0.5
+      }
+    },
+    "3": {
+      "mean": 0.5714285714285714,
+      "std": 0.1749635530559413,
+      "per_seq": {
+        "mit_license": 0.5,
+        "apache_license": 0.5,
+        "gpl_header": 0.5,
+        "bsd_license": 0.5,
+        "python_main": 0.5,
+        "creative_commons": 1.0,
+        "lorem_ipsum": 0.5
+      }
+    },
+    "4": {
+      "mean": 0.6428571428571429,
+      "std": 0.22587697572631282,
+      "per_seq": {
+        "mit_license": 0.5,
+        "apache_license": 1.0,
+        "gpl_header": 1.0,
+        "bsd_license": 0.5,
+        "python_main": 0.5,
+        "creative_commons": 0.5,
+        "lorem_ipsum": 0.5
+      }
+    },
+    "5": {
+      "mean": 0.5773809523809523,
+      "std": 0.1731314234791546,
+      "per_seq": {
+        "mit_license": 0.5,
+        "apache_license": 1.0,
+        "gpl_header": 0.5,
+        "bsd_license": 0.5,
+        "python_main": 0.5416666666666666,
+        "creative_commons": 0.5,
+        "lorem_ipsum": 0.5
+      }
+    },
+    "6": {
+      "mean": 0.5714285714285714,
+      "std": 0.17496355305594133,
+      "per_seq": {
+        "mit_license": 0.5,
+        "apache_license": 1.0,
+        "gpl_header": 0.5,
+        "bsd_license": 0.5,
+        "python_main": 0.5,
+        "creative_commons": 0.5,
+        "lorem_ipsum": 0.5
+      }
+    },
+    "7": {
+      "mean": 0.7142857142857143,
+      "std": 0.24743582965269675,
+      "per_seq": {
+        "mit_license": 1.0,
+        "apache_license": 0.5,
+        "gpl_header": 0.5,
+        "bsd_license": 0.5,
+        "python_main": 1.0,
+        "creative_commons": 1.0,
+        "lorem_ipsum": 0.5
+      }
+    },
+    "8": {
+      "mean": 0.5714285714285714,
+      "std": 0.17496355305594133,
+      "per_seq": {
+        "mit_license": 1.0,
+        "apache_license": 0.5,
+        "gpl_header": 0.5,
+        "bsd_license": 0.5,
+        "python_main": 0.5,
+        "creative_commons": 0.5,
+        "lorem_ipsum": 0.5
+      }
+    },
+    "9": {
+      "mean": 0.613095238095238,
+      "std": 0.18728729431609847,
+      "per_seq": {
+        "mit_license": 0.5,
+        "apache_license": 0.5,
+        "gpl_header": 0.5,
+        "bsd_license": 0.5,
+        "python_main": 1.0,
+        "creative_commons": 0.7916666666666666,
+        "lorem_ipsum": 0.5
+      }
+    },
+    "10": {
+      "mean": 0.5714285714285714,
+      "std": 0.1749635530559413,
+      "per_seq": {
+        "mit_license": 0.5,
+        "apache_license": 0.5,
+        "gpl_header": 0.5,
+        "bsd_license": 0.5,
+        "python_main": 1.0,
+        "creative_commons": 0.5,
+        "lorem_ipsum": 0.5
+      }
+    },
+    "11": {
+      "mean": 0.574404761904762,
+      "std": 0.17389715664275646,
+      "per_seq": {
+        "mit_license": 0.5,
+        "apache_license": 0.5,
+        "gpl_header": 0.5208333333333334,
+        "bsd_license": 0.5,
+        "python_main": 1.0,
+        "creative_commons": 0.5,
+        "lorem_ipsum": 0.5
+      }
+    },
+    "12": {
+      "mean": 0.5238095238095238,
+      "std": 0.23049629733230037,
+      "per_seq": {
+        "mit_license": 0.5,
+        "apache_license": 0.5,
+        "gpl_header": 0.5208333333333334,
+        "bsd_license": 0.5,
+        "python_main": 1.0,
+        "creative_commons": 0.14583333333333334,
+        "lorem_ipsum": 0.5
+      }
+    },
+    "13": {
+      "mean": 0.5327380952380952,
+      "std": 0.08019162848397307,
+      "per_seq": {
+        "mit_license": 0.7291666666666666,
+        "apache_license": 0.5,
+        "gpl_header": 0.5,
+        "bsd_license": 0.5,
+        "python_main": 0.5,
+        "creative_commons": 0.5,
+        "lorem_ipsum": 0.5
+      }
+    },
+    "14": {
+      "mean": 0.5,
+      "std": 0.0,
+      "per_seq": {
+        "mit_license": 0.5,
+        "apache_license": 0.5,
+        "gpl_header": 0.5,
+        "bsd_license": 0.5,
+        "python_main": 0.5,
+        "creative_commons": 0.5,
+        "lorem_ipsum": 0.5
+      }
+    },
+    "15": {
+      "mean": 0.5,
+      "std": 0.0,
+      "per_seq": {
+        "mit_license": 0.5,
+        "apache_license": 0.5,
+        "gpl_header": 0.5,
+        "bsd_license": 0.5,
+        "python_main": 0.5,
+        "creative_commons": 0.5,
+        "lorem_ipsum": 0.5
+      }
+    },
+    "16": {
+      "mean": 0.5416666666666666,
+      "std": 0.08625819491779428,
+      "per_seq": {
+        "mit_license": 0.5416666666666666,
+        "apache_license": 0.5,
+        "gpl_header": 0.5,
+        "bsd_license": 0.5,
+        "python_main": 0.5,
+        "creative_commons": 0.75,
+        "lorem_ipsum": 0.5
+      }
+    },
+    "17": {
+      "mean": 0.5029761904761905,
+      "std": 0.017354023496563377,
+      "per_seq": {
+        "mit_license": 0.5,
+        "apache_license": 0.5,
+        "gpl_header": 0.4791666666666667,
+        "bsd_license": 0.5,
+        "python_main": 0.5,
+        "creative_commons": 0.5416666666666666,
+        "lorem_ipsum": 0.5
+      }
+    },
+    "18": {
+      "mean": 0.5327380952380952,
+      "std": 0.16956451825290614,
+      "per_seq": {
+        "mit_license": 0.9166666666666666,
+        "apache_license": 0.5,
+        "gpl_header": 0.3125,
+        "bsd_license": 0.5,
+        "python_main": 0.5,
+        "creative_commons": 0.5,
+        "lorem_ipsum": 0.5
+      }
+    },
+    "19": {
+      "mean": 0.494047619047619,
+      "std": 0.014580296087995114,
+      "per_seq": {
+        "mit_license": 0.5,
+        "apache_license": 0.5,
+        "gpl_header": 0.4583333333333333,
+        "bsd_license": 0.5,
+        "python_main": 0.5,
+        "creative_commons": 0.5,
+        "lorem_ipsum": 0.5
+      }
+    },
+    "20": {
+      "mean": 0.48809523809523814,
+      "std": 0.029160592175990208,
+      "per_seq": {
+        "mit_license": 0.5,
+        "apache_license": 0.5,
+        "gpl_header": 0.4166666666666667,
+        "bsd_license": 0.5,
+        "python_main": 0.5,
+        "creative_commons": 0.5,
+        "lorem_ipsum": 0.5
+      }
+    },
+    "21": {
+      "mean": 0.5029761904761905,
+      "std": 0.007290148043997567,
+      "per_seq": {
+        "mit_license": 0.5,
+        "apache_license": 0.5,
+        "gpl_header": 0.5,
+        "bsd_license": 0.5,
+        "python_main": 0.5,
+        "creative_commons": 0.5208333333333334,
+        "lorem_ipsum": 0.5
+      }
+    },
+    "22": {
+      "mean": 0.5595238095238095,
+      "std": 0.09671474291233285,
+      "per_seq": {
+        "mit_license": 0.6666666666666666,
+        "apache_license": 0.5,
+        "gpl_header": 0.5,
+        "bsd_license": 0.5,
+        "python_main": 0.5,
+        "creative_commons": 0.75,
+        "lorem_ipsum": 0.5
+      }
+    },
+    "23": {
+      "mean": 0.5833333333333333,
+      "std": 0.1767766952966369,
+      "per_seq": {
+        "mit_license": 0.5,
+        "apache_license": 0.625,
+        "gpl_header": 0.5,
+        "bsd_license": 0.5,
+        "python_main": 0.5,
+        "creative_commons": 1.0,
+        "lorem_ipsum": 0.4583333333333333
+      }
+    },
+    "24": {
+      "mean": 0.675595238095238,
+      "std": 0.2193111122254826,
+      "per_seq": {
+        "mit_license": 0.5,
+        "apache_license": 1.0,
+        "gpl_header": 0.5,
+        "bsd_license": 0.7291666666666666,
+        "python_main": 0.5,
+        "creative_commons": 1.0,
+        "lorem_ipsum": 0.5
+      }
+    }
+  }
+}
