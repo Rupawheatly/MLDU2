@@ -40,9 +40,9 @@ All notebooks are standalone — open in Jupyter or Colab and Run All. Outputs l
 
 ## Notebooks
 
-The 15 notebooks fall into three groups: parent-paper experiments (cross-sequence dissociation analysis), multi-seed robustness add-ons, and MLDU-E pipelines (the constructive PGA erasure method).
+The 15 notebooks fall into three groups: per-architecture cross-sequence dissociation analysis, multi-seed and bootstrap robustness checks, and MLDU-E pipelines (the constructive PGA erasure method).
 
-### Parent paper
+### Per-architecture cross-sequence analysis
 
 | Notebook | Model | Params | Primary experiments |
 |---|---|---|---|
@@ -165,7 +165,7 @@ All 15 notebooks are executed with output cells preserved so reviewers can read 
 
 ## Files produced by each notebook
 
-### Parent paper
+### Per-architecture cross-sequence analysis
 
 - `01_toy_model.ipynb` → `critical_experiments.json`, `embedding_control_results.json`, `gpt2_second_secret_results.json`, `baseline_comparison_results.json`, `future_work_results.json` and figures `fig_critical_experiments.png`, `fig_embedding_control.png`, `fig_multi_secret.png`, `fig_sota_comparison.png`, `phase1_training_curves.png`, `phase2_causal_tracing.png`, `phase3_unlearning_dynamics.png`
 - `02_pythia.ipynb` → `pythia_residual_causal_results.json` and figures `fig_pythia_density_comparison.png`, `fig_pythia_residual_causal.png`
