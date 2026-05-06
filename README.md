@@ -29,9 +29,9 @@ This repository contains every notebook used to produce the quantitative claims 
 ```
 .
 ├── README.md
-├── notebooks/             15 Jupyter notebooks
-├── results/               67 JSON files (flat, no subdirectories)
-└── figures/               41 PNG files (every figure cited by the paper, all 300 DPI)
+├── notebooks/             19 Jupyter notebooks
+├── results/               74 JSON files (flat, no subdirectories)
+└── figures/               48 PNG files (every figure cited by the paper, all 300 DPI)
 ```
 
 All notebooks are standalone — open in Jupyter or Colab and Run All. Outputs land in `results/` (JSON) and `figures/` (PNG).
@@ -40,7 +40,7 @@ All notebooks are standalone — open in Jupyter or Colab and Run All. Outputs l
 
 ## Notebooks
 
-The 15 notebooks fall into three groups: per-architecture cross-sequence dissociation analysis, multi-seed and bootstrap robustness checks, and MLDU-E pipelines (the constructive PGA erasure method).
+The 19 notebooks fall into three groups: per-architecture cross-sequence dissociation analysis, multi-seed / bootstrap / jackknife robustness checks (now extended to all three pretrained architectures), and MLDU-E pipelines (the constructive PGA erasure method).
 
 ### Per-architecture cross-sequence analysis
 
@@ -53,14 +53,19 @@ The 15 notebooks fall into three groups: per-architecture cross-sequence dissoci
 | `05_appendix_experiments.ipynb` | Pythia-70M | 70M | E1 baseline · R3 natural-vs-injected · R3B multi-secret survival · R3C unlearning-feasibility pilot · multi-seed LOO stability · random-init null · probe-direction unlearning |
 | `06_orphan_figures.ipynb` | cross-model | — | Composite figures from JSON outputs of 01–05: three-model LOO, per-sequence LOO heatmap, cross-architecture emergence, R3 / R3B / R3C visualisations |
 
-### Multi-seed and bootstrap robustness
+### Multi-seed, bootstrap, and jackknife robustness
 
-| Notebook | Model | Primary experiment |
+These eight notebooks form a complete 3 × 3 robustness grid: probe-init seeds × bootstrap × jackknife, each on Pythia-70M, GPT-2 Medium, and Mistral-7B.
+
+| Notebook | Model(s) | Primary experiment |
 |---|---|---|
 | `gpt2m_multiseed.ipynb` | GPT-2 Medium | 5-seed probe characterization on 7 sequences |
 | `gpt2m_bootstrap.ipynb` | GPT-2 Medium | 100-replicate bootstrap over neutral-context pool |
 | `gpt2m_jackknife.ipynb` | GPT-2 Medium | Leave-one-sequence-out jackknife over 7-sequence pool |
 | `mistral7b_multiseed.ipynb` | Mistral-7B | 5-seed probe characterization with Colab Drive mount + 4-bit fallback |
+| `mldu-e-bootstrap-pythia-mistral.ipynb` | Pythia-70M, Mistral-7B | 100-replicate neutral-context bootstrap on both architectures (parallel to `gpt2m_bootstrap.ipynb`) |
+| `mldu-e-jackknife-pythia-mistral.ipynb` | Pythia-70M, Mistral-7B | Leave-one-sequence-out jackknife on both architectures (parallel to `gpt2m_jackknife.ipynb`) |
+| `mldu-e-pythia70m-pga-multiseed.ipynb` | Pythia-70M | K=4 LoRA-init seeds {7, 13, 42, 99} for the post-PGA per-layer probe (used to report mean ± std at L6) |
 
 ### MLDU-E pipelines (constructive erasure method)
 
@@ -83,7 +88,13 @@ The MLDU-E section is organised as four self-contained Run-All mega-notebooks pl
 | Pythia-70M LOO mean gap +0.32 to +0.347 | `05_appendix_experiments.ipynb` | `multiseed_loo_results.json` | `fig_multiseed_loo.png` |
 | GPT-2 Medium LOO +0.191 trans, peak +0.449 at L21 | `03_gpt-2-medium.ipynb`, `gpt2m_multiseed.ipynb` | `R1_results.json`, `loo_multiseed_base.json` | `fig_multiseed_gpt2m_base_300dpi.png` |
 | GPT-2 context-bootstrap 95% CI [+0.184, +0.196] | `gpt2m_bootstrap.ipynb` | `loo_bootstrap_gpt2m.json` | `fig_gpt2m_bootstrap_300dpi.png` |
+| Pythia-70M bootstrap: peak gap +0.289 at L2, CI [+0.144, +0.404]; all 6 transformer-layer CIs strictly positive | `mldu-e-bootstrap-pythia-mistral.ipynb` | `loo_bootstrap_pythia70m.json` | `fig_bootstrap_pythia_mistral.png` |
+| Mistral-7B bootstrap: peak gap +0.301 at L16, CI [+0.209, +0.387]; 31/33 depths strictly positive | `mldu-e-bootstrap-pythia-mistral.ipynb` | `loo_bootstrap_mistral7b.json` | `fig_bootstrap_pythia_mistral.png` |
 | GPT-2 jackknife: all 7 strictly positive [+0.095, +0.250] | `gpt2m_jackknife.ipynb` | `loo_jackknife_gpt2m.json` | `fig_gpt2m_jackknife_300dpi.png` |
+| Pythia-70M jackknife: all 7/7 strictly positive [+0.410, +0.667], baseline +0.583 | `mldu-e-jackknife-pythia-mistral.ipynb` | `loo_jackknife_pythia70m.json` | `fig_jackknife_pythia_mistral_300dpi.png` |
+| Mistral-7B jackknife: all 7/7 strictly positive [+0.550, +0.834], baseline +0.699 | `mldu-e-jackknife-pythia-mistral.ipynb` | `loo_jackknife_mistral7b.json` | `fig_jackknife_pythia_mistral_300dpi.png` |
+| **Combined: 21/21 strictly positive trans-layer jackknife gaps across the three pretrained architectures** | three jackknife notebooks above | three jackknife JSONs | — |
+| **Pythia-70M post-PGA L6 = 0.107 ± 0.041 (K=4 LoRA-init seeds)** | `mldu-e-pythia70m-pga-multiseed.ipynb` | `mldu_e_pga_pythia70m_multiseed.json` | `fig_mldu_e_pga_multiseed.png` |
 | Mistral-7B mid-layer gap +0.355, peak +0.471 at L11 | `mistral7b_multiseed.ipynb` | `loo_multiseed_mistral7b.json` | `fig_mistral7b_multiseed_300dpi.png` |
 | Probe-direction intervention: +0.44 → −0.19 at L4 (Pythia) | `05_appendix_experiments.ipynb` | `R1_results.json` | `fig_probe_direction.png` |
 | Natural vs injected memorization regime distinction | `05_appendix_experiments.ipynb` | `R3_results.json`, `R3B_results.json`, `R3C_pilot_v2_results.json` | `fig_r3_natural_vs_injected.png`, `fig_r3b_injected_loo.png`, `fig_r3c_feasibility.png` |
@@ -123,6 +134,9 @@ The MLDU-E pipelines depend on `pythia_memorized.json` / `pythia_clean.json` (au
 | `gpt2m_bootstrap.ipynb` | T4 | ~15 min (uses cache) |
 | `gpt2m_jackknife.ipynb` | any | ~30 s (uses cache) |
 | `mistral7b_multiseed.ipynb` | L4 / A100 (or T4 with 4-bit fallback) | ~25 min |
+| `mldu-e-bootstrap-pythia-mistral.ipynb` | T4 (Pythia) + L4/A100 (Mistral) | ~10 min Pythia, ~25 min Mistral |
+| `mldu-e-jackknife-pythia-mistral.ipynb` | T4 (Pythia) + L4/A100 (Mistral) | ~10 min Pythia, ~30 min Mistral |
+| `mldu-e-pythia70m-pga-multiseed.ipynb` | T4 | ~35 min (4 LoRA-init seeds) |
 | `mldu-e-toy-small-model-pipeline1.ipynb` | T4 | ~25 min |
 | `MLDU_E_mistral_kaggle_pipeline2.ipynb` | L4 / A100 | ~30 min |
 | `mldu-e-pythia-followup-kaggle_pipleline3.ipynb` | T4 | ~25 min |
@@ -152,7 +166,7 @@ The `datasets==2.21.0` pin is required because newer versions removed support fo
 
 ## Notebook execution status
 
-All 15 notebooks are executed with output cells preserved so reviewers can read results without re-running. Four notebooks are partial by one cell each (intentional — see "Reproducibility notes" above):
+All 19 notebooks are executed with output cells preserved so reviewers can read results without re-running. Four notebooks are partial by one cell each (intentional — see "Reproducibility notes" above):
 
 | Notebook | Cells | Note |
 |---|---|---|
@@ -174,12 +188,15 @@ All 15 notebooks are executed with output cells preserved so reviewers can read 
 - `05_appendix_experiments.ipynb` → `E1_results.json`, `R3_results.json`, `R3B_results.json`, `R3C_pilot_v2_results.json`, `multiseed_loo_results.json`, `random_init_loo_results.json`, `probe_direction_unlearn_results.json` and `fig_probe_direction.png`
 - `06_orphan_figures.ipynb` → `fig_loo_three_models.png`, `fig_loo_per_sequence_heatmap.png`, `fig_emergence.png`, `fig_r3_natural_vs_injected.png`, `fig_r3b_injected_loo.png`, `fig_r3c_feasibility.png`
 
-### Multi-seed and bootstrap
+### Multi-seed, bootstrap, and jackknife
 
 - `gpt2m_multiseed.ipynb` → `loo_multiseed_base.json` and `fig_multiseed_gpt2m_base_300dpi.png`, `fig_multiseed_seed_panel_base_300dpi.png`
 - `gpt2m_bootstrap.ipynb` → `loo_bootstrap_gpt2m.json` and `fig_gpt2m_bootstrap_300dpi.png`
 - `gpt2m_jackknife.ipynb` → `loo_jackknife_gpt2m.json` and `fig_gpt2m_jackknife_300dpi.png`
 - `mistral7b_multiseed.ipynb` → `loo_multiseed_mistral7b.json` and `fig_mistral7b_multiseed_300dpi.png`
+- `mldu-e-bootstrap-pythia-mistral.ipynb` → `loo_bootstrap_pythia70m.json`, `loo_bootstrap_mistral7b.json` and `fig_bootstrap_pythia_mistral.png`
+- `mldu-e-jackknife-pythia-mistral.ipynb` → `loo_jackknife_pythia70m.json`, `loo_jackknife_mistral7b.json` and `fig_jackknife_pythia_mistral_300dpi.png`
+- `mldu-e-pythia70m-pga-multiseed.ipynb` → `mldu_e_pga_pythia70m_multiseed.json` and `fig_mldu_e_pga_multiseed.png`
 
 ### MLDU-E pipelines
 
