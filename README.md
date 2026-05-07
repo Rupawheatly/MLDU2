@@ -30,8 +30,17 @@ This repository contains every notebook used to produce the quantitative claims 
 .
 ├── README.md
 ├── notebooks/             19 Jupyter notebooks
-├── results/               74 JSON files (flat, no subdirectories)
-└── figures/               48 PNG files (every figure cited by the paper, all 300 DPI)
+├── results/               73 JSON files (flat, no subdirectories)
+├── figures/               48 PNG files (every figure cited by the paper, all 300 DPI)
+├── checkpoints/
+│   └── pythia70m_pga_lora/    PGA-trained LoRA adapter for Pythia-70M
+│                              (adapter_config.json + adapter_model.safetensors)
+└── data/                  5 input JSON files needed by the notebooks
+    ├── pythia_memorized.json     7 memorised licence preambles for Pythia-70M
+    ├── pythia_clean.json         7 paired clean prefixes for Pythia-70M
+    ├── mistral_memorized.json    7 memorised sequences for Mistral-7B
+    ├── mistral_clean.json        7 paired clean prefixes for Mistral-7B
+    └── heldout.json              20-sentence held-out PPL evaluation pool
 ```
 
 All notebooks are standalone — open in Jupyter or Colab and Run All. Outputs land in `results/` (JSON) and `figures/` (PNG).
@@ -66,6 +75,7 @@ These eight notebooks form a complete 3 × 3 robustness grid: probe-init seeds �
 | `mldu-e-bootstrap-pythia-mistral.ipynb` | Pythia-70M, Mistral-7B | 100-replicate neutral-context bootstrap on both architectures (parallel to `gpt2m_bootstrap.ipynb`) |
 | `mldu-e-jackknife-pythia-mistral.ipynb` | Pythia-70M, Mistral-7B | Leave-one-sequence-out jackknife on both architectures (parallel to `gpt2m_jackknife.ipynb`) |
 | `mldu-e-pythia70m-pga-multiseed.ipynb` | Pythia-70M | K=4 LoRA-init seeds {7, 13, 42, 99} for the post-PGA per-layer probe (used to report mean ± std at L6) |
+| `mldu-e-pythia70m-unlearning-baselines.ipynb` | Pythia-70M | Unified head-to-head: PGA vs four behavioural baselines (GA, NPO, RMU, IDK) on the same memorised pool, same probe / recall / PPL pipeline; PPL-gated training prevents capability collapse |
 
 ### MLDU-E pipelines (constructive erasure method)
 
@@ -103,6 +113,7 @@ The MLDU-E section is organised as four self-contained Run-All mega-notebooks pl
 | **PGA Mistral-7B: mid-layer 1.00 → 0.42 (L24, L28)** | `MLDU_E_mistral_kaggle_pipeline2.ipynb` | `mldu_e_pga_mistral7b_v2.json` | `mldu_e_pga_scaling.png` |
 | **MD-PGA GPT-2 Medium k=2 at L21: 1.00 → 0.061** | `mldu-e-pythia-followup-kaggle_pipleline3.ipynb` | `gpt2m_md_pga_results.json` | `fig_md_pga_winning_config.png` |
 | **Capability rank-1 PGA: mean Δacc −0.5pp, max BoolQ −2.2pp** | `mldu-e-scale-and-controls-kaggle-pipeline4.ipynb` | `mldu_e_capability_benchmarks.json` | `fig_capability_benchmarks.png` |
+| **Pythia-70M unified head-to-head: PGA wins on all three axes (probe defeat L6 = 1.0, capability retention 89%, recall drop −3.2 nats); GA collapses to 2% retention, NPO 39%, RMU 67%, IDK 79%** | `mldu-e-pythia70m-unlearning-baselines.ipynb` | `mldu_e_unlearning_baselines_v2.json` | `fig_unlearning_baselines_pythia70m_v3_combined_300dpi.png` |
 | **Capability rank-4 adv-PGA: mean Δacc +0.2pp, all per-task |Δ| ≤ 2.9pp** | `mldu-e-scale-and-controls-kaggle-pipeline4.ipynb` | `mldu_e_capability_benchmarks_adversarial.json` | `fig_capability_benchmarks_adversarial.png` |
 | Combined attack Pareto wall (probe 0.66 at 6.2× PPL, k=30) | `mldu-e-toy-small-model-pipeline1.ipynb` | `mldu_e_combined_attack_results.json` | `mldu_e_combined_attack.png` |
 | AAE hits all three criteria (probe 0.69) | `mldu-e-toy-small-model-pipeline1.ipynb` | `mldu_e_aae_results.json` | `mldu_e_aae_trajectory.png` |
@@ -137,6 +148,7 @@ The MLDU-E pipelines depend on `pythia_memorized.json` / `pythia_clean.json` (au
 | `mldu-e-bootstrap-pythia-mistral.ipynb` | T4 (Pythia) + L4/A100 (Mistral) | ~10 min Pythia, ~25 min Mistral |
 | `mldu-e-jackknife-pythia-mistral.ipynb` | T4 (Pythia) + L4/A100 (Mistral) | ~10 min Pythia, ~30 min Mistral |
 | `mldu-e-pythia70m-pga-multiseed.ipynb` | T4 | ~35 min (4 LoRA-init seeds) |
+| `mldu-e-pythia70m-unlearning-baselines.ipynb` | T4 | ~15 min (4 baselines + PGA load + 3 figures) |
 | `mldu-e-toy-small-model-pipeline1.ipynb` | T4 | ~25 min |
 | `MLDU_E_mistral_kaggle_pipeline2.ipynb` | L4 / A100 | ~30 min |
 | `mldu-e-pythia-followup-kaggle_pipleline3.ipynb` | T4 | ~25 min |
@@ -197,6 +209,7 @@ All 19 notebooks are executed with output cells preserved so reviewers can read 
 - `mldu-e-bootstrap-pythia-mistral.ipynb` → `loo_bootstrap_pythia70m.json`, `loo_bootstrap_mistral7b.json` and `fig_bootstrap_pythia_mistral.png`
 - `mldu-e-jackknife-pythia-mistral.ipynb` → `loo_jackknife_pythia70m.json`, `loo_jackknife_mistral7b.json` and `fig_jackknife_pythia_mistral_300dpi.png`
 - `mldu-e-pythia70m-pga-multiseed.ipynb` → `mldu_e_pga_pythia70m_multiseed.json` and `fig_mldu_e_pga_multiseed.png`
+- `mldu-e-pythia70m-unlearning-baselines.ipynb` → `mldu_e_unlearning_baselines_v2.json` and `fig_unlearning_baselines_pythia70m_v3_combined_300dpi.png` (also copied as `fig_unlearning_baselines_pythia70m.png` in the paper figures folder; loads PGA from `checkpoints/pythia70m_pga_lora/` and re-evaluates on the same probe / recall / PPL pipeline used for the four behavioural baselines)
 
 ### MLDU-E pipelines
 
