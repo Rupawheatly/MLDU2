@@ -176,18 +176,6 @@ The `datasets==2.21.0` pin is required because newer versions removed support fo
 
 ---
 
-## Notebook execution status
-
-All 19 notebooks are executed with output cells preserved so reviewers can read results without re-running. Four notebooks are partial by one cell each (intentional — see "Reproducibility notes" above):
-
-| Notebook | Cells | Note |
-|---|---|---|
-| `gpt2m_jackknife.ipynb` | 5 / 6 | final summary cell unrun |
-| `gpt2m_multiseed.ipynb` | 17 / 18 | final summary cell unrun |
-| `mistral7b_multiseed.ipynb` | 11 / 12 | final summary cell unrun |
-| `mldu-e-scale-and-controls-kaggle-pipeline4.ipynb` | 65 / 66 | cell 64 is the on-demand PIQA hook diagnostic — same diagnostic also runs in the standalone Pythia notebook |
-
----
 
 ## Files produced by each notebook
 
